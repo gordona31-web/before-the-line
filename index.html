@@ -181,7 +181,7 @@ RECORDS.forEach(r => {
     if (r.label) li.style.setProperty("--label", r.label);
     li.innerHTML = `<a href="${esc(r.href)}" aria-label="Open breakout file ${esc(r.file)}: ${esc(r.artist)}, ${esc(r.t1)}">
       <div class="cover-wrap"><div class="disc"></div>
-        ${r.sticker ? `<div class="price">${esc(r.sticker)}</div>` : ""}
+        ${r.sticker ? `<div class="price">${esc(r.sticker).replace(" ","<br>")}</div>` : ""}
         <div class="cover">
           <img src="${esc(r.img)}" alt="${esc(r.imgAlt)}" width="640" height="640">
           <span class="tag">File ${esc(r.file)}</span>
