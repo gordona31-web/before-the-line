@@ -1,0 +1,1125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="From the Start: How Laufey Used Social Media to Build a Fanbase and Bring Gen Z to Jazz. A breakout file by Gordon Anderson.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Before the Line: Laufey</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&display=swap">
+<style>
+/* Layout: a record sleeve and its liner notes. Cobalt cover, a tracklist, numbered tracks.
+   One typeface (Archivo) used at two widths: condensed for display, normal for reading.
+   Color: cobalt for data, pink for Gordon's own voice. Square edges, no shadows, no cards. */
+:root{
+  color-scheme:light;
+  --paper:#FFFFFF; --surface:#FFFFFF; --ink:#0E0E10; --muted:#5D5D66; --line:#D9D9DE; --track:#ECECF0;
+  --blue:#1B3FCF; --blue-deep:#142FA0; --pink:#F5A9C2; --pink-ink:#B21F5A;
+  --accent:#1B3FCF; --accent-text:#1B3FCF; --series2:#D63B78;
+  --rose:#D63B78; --rose-text:#B21F5A; --rose-wash:#FFFFFF; --accent-wash:#FFFFFF; --on-accent:#FFFFFF;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --script:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --mono:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --col:43rem; --wide:68rem;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.62;counter-reset:track;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:0 4rem}
+a{color:inherit;text-decoration-thickness:2px;text-decoration-color:var(--pink);text-underline-offset:3px}
+a:hover{text-decoration-color:var(--blue)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
+.col{max-width:var(--wide);margin-inline:auto}
+section.col>*,.wide .sec-head,.wide>.col{max-width:var(--col)}
+.wide{max-width:var(--wide);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:800;text-wrap:balance;margin:0}
+h2{font-stretch:78%;line-height:.98;letter-spacing:-.005em}
+h3{line-height:1.25}
+p{margin:0}
+i,em{font-style:italic}
+.mono{font-variant-numeric:tabular-nums}
+td,.tip,.chart text{font-variant-numeric:tabular-nums}
+
+/* the cover: masthead + hero on a full-bleed cobalt band */
+.mast,.hero{background:var(--blue);color:#fff;box-shadow:0 0 0 100vmax var(--blue);clip-path:inset(0 -100vmax)}
+.mast{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-block:1.1rem .9rem;max-width:var(--wide);margin-inline:auto;
+  font-size:.875rem;font-weight:700}
+.draft{color:var(--pink);font-weight:600}
+.hero{display:grid;gap:1.25rem;padding-block:3rem 3.25rem;max-width:var(--wide);margin-inline:auto;text-align:left}
+.hero .eyebrow{color:#fff;opacity:.8;font-size:.9375rem;font-weight:600}
+.hero h1{font-stretch:68%;font-weight:850;font-size:clamp(2.7rem,8.4vw,6.4rem);line-height:.9;letter-spacing:-.01em;max-width:11.5em;color:#fff}
+.hero h1 .script{display:block;color:var(--pink);font-size:1.18em;margin-bottom:.06em}
+.dek{font-size:1.25rem;line-height:1.5;max-width:34em;color:#fff;opacity:.92}
+.byline{font-size:.9375rem;font-weight:700;color:#fff}
+.byline span{display:inline;font-weight:400;opacity:.8;margin-left:.6rem}
+
+/* three facts as ruled rows, not cards */
+.facts{display:grid;gap:0;margin-block:2.25rem 1rem;border-top:3px solid var(--ink)}
+.fact{display:grid;grid-template-columns:minmax(8rem,13rem) minmax(0,1fr);gap:1.5rem;align-items:baseline;padding-block:1rem;border-bottom:1px solid var(--line)}
+.fact .big{white-space:nowrap;font-family:var(--display);font-stretch:68%;font-weight:850;font-size:clamp(2.6rem,6vw,3.6rem);line-height:.95;color:var(--blue)}
+.fact p{font-size:1.0625rem;max-width:40em}
+@media (max-width:560px){.fact{grid-template-columns:1fr;gap:.25rem}}
+
+/* tracklist */
+.tracks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem 3rem;margin-block:2.5rem 1rem}
+.side-name{font-weight:800;font-size:.9375rem;padding-bottom:.4rem;border-bottom:3px solid var(--ink);margin-bottom:.2rem}
+.tracks ol{list-style:none;margin:0;padding:0}
+.tracks li a{display:grid;grid-template-columns:2.4rem minmax(0,1fr);gap:.5rem;padding-block:.42rem;border-bottom:1px solid var(--line);text-decoration:none}
+.tracks li a span{font-stretch:68%;font-weight:800;color:var(--blue)}
+.tracks li a:hover{color:var(--blue)}
+@media (max-width:620px){.tracks{grid-template-columns:1fr}}
+
+/* sections as numbered tracks */
+section{padding-block:3.25rem;border-top:3px solid var(--ink)}
+.sec-head{display:grid;gap:.55rem;margin-bottom:1.6rem}
+.sec-head h2{font-size:clamp(2rem,5vw,3.1rem)}
+.eyebrow{font-size:.9375rem;font-weight:700;color:var(--muted)}
+.sec-head .note{font-size:1rem}
+.prose{display:grid;gap:1.1rem}
+.prose p{max-width:66ch}
+.lede{font-size:1.3rem;font-weight:700;line-height:1.35}
+
+/* Gordon's voice */
+.me{display:grid;gap:.45rem}
+.me .who{font-size:.9375rem;font-weight:800;color:var(--pink-ink);display:flex;align-items:center;gap:.5rem}
+.me .who::before{content:"";width:.75rem;height:.75rem;background:var(--pink)}
+.me p{font-size:1.22rem;line-height:1.55;font-weight:500}
+
+/* placeholders */
+.slot{border:2px dashed var(--pink);padding:1rem 1.1rem;display:grid;gap:.25rem;justify-items:start;color:var(--muted);font-size:.9rem;min-height:6rem;align-content:center}
+.slot b{font-size:.9375rem;color:var(--pink-ink);font-weight:800}
+
+.photo img{display:block;width:100%;height:auto}
+
+/* figures and charts */
+figure{margin:0;display:grid;gap:.55rem}
+figcaption{font-size:.8125rem;color:var(--muted);line-height:1.5;max-width:72ch}
+.fig-title{font-weight:800;font-size:1.0625rem;line-height:1.3}
+.chart{position:relative;padding:.35rem 0 0}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart text{font-family:var(--sans);font-size:11.5px;fill:var(--muted)}
+.chart .lbl-me{fill:var(--pink-ink)}
+.chart .lbl-data{fill:var(--ink);font-weight:600}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:#fff;font-size:.8rem;line-height:1.45;
+  padding:.5rem .65rem;max-width:15rem;transform:translate(-50%,calc(-100% - 12px));white-space:normal}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.25rem;font-size:.875rem;color:var(--muted)}
+.legend i{display:inline-block;width:12px;height:12px;margin-right:.4rem;vertical-align:-1px}
+.scroll{overflow-x:auto}
+
+/* growth steps */
+.steps{display:grid;gap:0}
+.step{display:grid;grid-template-columns:6.5rem minmax(0,1fr);gap:1.25rem;padding-block:1.6rem;border-top:1px solid var(--line)}
+.step:first-child{border-top:0;padding-top:0}
+.step .yr{white-space:nowrap;font-stretch:68%;font-weight:850;font-size:1.5rem;line-height:1;color:var(--blue)}
+.dyn{display:none}
+.step h3{font-size:1.3rem;margin-bottom:.45rem}
+.step p+p{margin-top:.75rem}
+.step .num{color:var(--muted);font-size:.9rem;line-height:1.5}
+.why{font-size:1.0625rem;background:var(--track);padding:.8rem 1rem}
+.why b{font-weight:800}
+details.method{max-width:var(--col);margin-top:1.25rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:.8rem 0}
+details.method summary{cursor:pointer;font-weight:800;font-size:1rem}
+details.method p{font-size:1rem;margin-top:.8rem;line-height:1.55}
+.prose h3.sub{font-size:1.45rem;font-stretch:85%;margin-top:1.9rem}
+.quote{font-stretch:85%;font-weight:700;font-size:1.6rem;line-height:1.25;margin:.75rem 0;max-width:26em;color:var(--blue)}
+.quote small{display:block;font-stretch:100%;font-weight:500;font-size:.875rem;color:var(--muted);margin-top:.5rem}
+@media (max-width:560px){.step{grid-template-columns:1fr;gap:.35rem}}
+
+/* funnel */
+.funnel{display:grid;gap:0}
+.stage{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:2.25rem;padding-block:1.75rem;border-top:1px solid var(--line)}
+.stage:first-child{border-top:0}
+.stage .story h3{font-size:1.3rem;margin-bottom:.45rem}
+.stage .story .when{font-size:.9rem;font-weight:800;color:var(--pink-ink);margin-bottom:.35rem}
+.stage .story p{font-size:1.0625rem;line-height:1.62}
+.stage .data{padding-left:0;display:grid;gap:.9rem;align-content:start}
+.stage .data>p{font-size:1rem;line-height:1.55}
+.stage .data>p b{font-stretch:75%;font-weight:850;font-size:1.35em;color:var(--blue)}
+.meter{position:relative;height:10px;background:var(--track);margin-block:.5rem .25rem}
+.meter .fill{position:absolute;left:0;top:0;bottom:0;background:var(--blue)}
+.meter .med{position:absolute;top:-5px;width:3px;height:20px;margin-left:-1px;background:var(--ink)}
+.pbars{display:grid;gap:.15rem}
+.pbars small{font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.pbars .bar{display:block;height:10px;background:var(--blue);margin-bottom:.4rem}
+.pbars .bar:last-child{margin-bottom:0}
+.pbars .bar.dim{background:#B9B9C2}
+@media (max-width:680px){.stage{grid-template-columns:1fr;gap:1rem}}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
+@media (max-width:620px){.pair{grid-template-columns:1fr}}
+
+/* tables */
+table{border-collapse:collapse;width:100%;font-size:.9375rem;min-width:38rem}
+th,td{text-align:left;vertical-align:top;padding:.7rem .75rem .7rem 0;border-top:1px solid var(--line)}
+th{font-size:.875rem;color:var(--ink);font-weight:800;border-top:0;border-bottom:3px solid var(--ink)}
+
+/* deal arc */
+.arc{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.arc li{display:grid;grid-template-columns:8rem minmax(0,1fr);gap:1.25rem;padding-block:.9rem;border-top:1px solid var(--line);font-size:1.0625rem}
+.arc li:first-child{border-top:0}
+.arc .d{font-stretch:75%;font-weight:800;font-size:1.05rem}
+.arc .lev{font-size:.9rem;font-weight:800;color:var(--pink-ink);display:block;margin-top:.2rem}
+@media (max-width:560px){.arc li{grid-template-columns:1fr;gap:.2rem}}
+
+/* takeaways */
+.takes{display:grid;gap:1.5rem;counter-reset:t;list-style:none;padding:0;margin:0}
+.takes li{counter-increment:t;display:grid;grid-template-columns:3rem minmax(0,1fr);gap:.9rem}
+.takes li::before{content:counter(t);font-stretch:62%;font-weight:850;font-size:2.6rem;line-height:.85}
+.takes h3{font-size:1.2rem;margin-bottom:.3rem}
+
+/* inverted tracks (deal arc, takeaways) */
+section.inv{background:var(--blue);color:#fff;box-shadow:0 0 0 100vmax var(--blue);clip-path:inset(0 -100vmax);border-top:0;--line:rgba(255,255,255,.28)}
+section.inv .eyebrow,section.inv .note{color:rgba(255,255,255,.85)}
+section.inv .arc .lev{color:var(--pink)}
+section.inv .takes li::before{color:var(--pink)}
+section.inv a{color:#fff}
+
+/* family tree */
+.tree{display:grid;gap:1rem}
+.branch{display:grid;grid-template-columns:10rem minmax(0,1fr);gap:1rem;align-items:baseline;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.branch h3{font-size:.9375rem;font-weight:800}
+.chips{display:block;font-size:1.0625rem;line-height:1.6}
+.chip{display:inline}
+.chip:not(:last-child)::after{content:" / ";color:var(--muted)}
+.chip.hub{font-weight:800;color:var(--blue)}
+@media (max-width:560px){.branch{grid-template-columns:1fr;gap:.3rem}}
+.next{margin-top:1.5rem;padding:1rem 1.1rem;background:var(--track);display:grid;gap:.35rem}
+.next b{font-size:1rem;color:var(--ink);font-weight:800}
+
+.sources{font-size:.8125rem;color:var(--muted);columns:2 18rem;column-gap:2rem;line-height:1.5}
+.sources p{break-inside:avoid;margin-bottom:.5rem}
+.sources a{color:var(--muted)}
+.note{font-size:.9rem;color:var(--muted);line-height:1.5}
+
+/* peers + index */
+.peers{min-width:46rem}
+.peers td:first-child{font-weight:800;white-space:nowrap}
+.peers tr.hi td{color:var(--blue)}
+.peers td small{display:block;color:var(--muted);font-size:.8rem}
+.compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.75rem 2.5rem;margin-top:2rem}
+.compare>div{display:grid;gap:.35rem;align-content:start;border-top:3px solid var(--ink);padding-top:.75rem}
+.compare h3{font-size:1.1rem}
+.compare .tag{font-size:.875rem;font-weight:800;color:var(--blue)}
+@media (max-width:620px){.compare{grid-template-columns:1fr}}
+.formula{border-top:3px solid var(--ink);border-bottom:1px solid var(--line);padding-block:1.25rem;display:grid;gap:1rem}
+.formula .eq{font-stretch:80%;font-weight:800;font-size:clamp(1.3rem,3.2vw,1.7rem);line-height:1.3}
+.terms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem 1.5rem}
+.terms div{display:grid;gap:.2rem}
+.terms b{font-size:1.3rem;color:var(--blue);font-weight:800}
+.terms span{font-weight:800;font-size:.95rem}
+.terms small{font-size:.85rem;color:var(--muted);line-height:1.45}
+@media (max-width:680px){.terms{grid-template-columns:1fr}}
+.scores{min-width:40rem}
+.scores td,.scores th{text-align:right}
+.scores td:first-child,.scores th:first-child{text-align:left}
+.scores td.tot{font-weight:800;color:var(--blue)}
+
+/* numbered key under the listener chart */
+.moments{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr));gap:.45rem 1.5rem;font-size:.875rem;color:var(--muted)}
+.moments li{display:grid;grid-template-columns:1.35rem minmax(0,1fr);gap:.55rem;align-items:start;line-height:1.4}
+.moments span:not(.k){display:inline-grid;place-items:center;width:1.35rem;height:1.35rem;background:var(--ink);color:#fff;font-size:.72rem;font-weight:800}
+/* "Fan survey" run-in label */
+.sv{font-size:.9rem;font-weight:800;color:var(--pink-ink);margin-right:.35rem;white-space:nowrap}
+.sv::after{content:":"}
+@media (prefers-reduced-motion:no-preference){ .draw{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:draw 1.8s ease-out .2s forwards} @keyframes draw{to{stroke-dashoffset:0}} }
+
+/* ===== record store: the sleeve, the crate dividers, the shelf talkers ===== */
+:root{--yellow:#FFD23F;--wall:#F1F1F3}
+body{background:var(--wall)}
+.store{max-width:var(--wide);margin:2rem auto 1rem;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:2.5rem;align-items:start}
+@media (max-width:880px){.store{grid-template-columns:1fr;gap:1.75rem}}
+.record{position:relative;padding-right:20%}
+.vinyl{position:absolute;top:5%;right:0;width:86%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,#0b0b0d 0 2.3%,var(--pink) 2.5% 17%,#2b2b30 17.3% 18%,transparent 18.2%),repeating-radial-gradient(circle,#131316 0 1.4px,#202025 1.4px 2.8px);
+  box-shadow:inset 0 0 0 7px #0b0b0d;transition:transform .7s ease}
+.vinyl span{position:absolute;inset:0;display:grid;place-content:center;text-align:center;color:var(--ink);font-size:clamp(.5rem,1.1vw,.72rem);font-weight:800;line-height:1.25;padding-top:15%}
+.record:hover .vinyl{transform:translateX(7%) rotate(35deg)}
+@media (prefers-reduced-motion:reduce){.record:hover .vinyl{transform:none}}
+.sleeve{position:relative;aspect-ratio:1/1;background:var(--blue);color:#fff;padding:clamp(1.1rem,3vw,2rem);display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 18px 30px -18px rgba(0,0,0,.45)}
+.sleeve .top{display:flex;justify-content:space-between;gap:1rem;font-size:.8rem;font-weight:700}
+.sleeve .eyebrow{color:#fff;opacity:.85;font-size:.85rem;font-weight:600;margin-bottom:.6rem}
+.sleeve h1{font-stretch:66%;font-weight:850;font-size:clamp(1.65rem,4.1vw,3.05rem);line-height:.93;letter-spacing:0;color:#fff}
+.sleeve h1 .script{display:block;color:var(--pink);font-size:1.6em;line-height:.88;margin-bottom:.14em}
+.price{position:absolute;top:24%;right:-1.2rem;width:6.4rem;aspect-ratio:1;border-radius:50%;background:var(--yellow);color:var(--ink);display:grid;place-content:center;text-align:center;
+  font-weight:850;font-stretch:72%;font-size:1.15rem;line-height:1;transform:rotate(12deg);box-shadow:0 3px 0 rgba(0,0,0,.18);z-index:2}
+.price small{display:block;font-stretch:100%;font-size:.66rem;font-weight:700;margin-top:.25rem}
+@media (max-width:560px){.price{right:-3.4rem;top:auto;bottom:-1.4rem;width:4.9rem;font-size:.9rem}}
+.back{background:#fff;padding:1.5rem 1.5rem 1.2rem;display:grid;gap:1.1rem;align-content:start;border-top:6px solid var(--ink)}
+.back .dek{color:var(--ink);opacity:1;font-size:1.0625rem;line-height:1.55}
+.back .byline{color:var(--ink)}
+.back .byline span{opacity:.65}
+.back .tracks{grid-template-columns:1fr;gap:1.1rem;margin:0}
+.tracks li a{grid-template-columns:2.2rem minmax(0,1fr)}
+.tracks li a span{color:var(--blue)}
+.barcode-row{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;font-size:.75rem;color:var(--muted);border-top:1px solid var(--line);padding-top:.9rem}
+.barcode{flex:none;width:9.5rem;height:2.8rem;background:repeating-linear-gradient(90deg,#111 0 2px,transparent 2px 4px,#111 4px 5px,transparent 5px 7px,#111 7px 10px,transparent 10px 11px,#111 11px 12px,transparent 12px 15px,#111 15px 16px,transparent 16px 19px)}
+
+/* hype stickers */
+.hype{display:flex;flex-wrap:wrap;gap:1.1rem 1.4rem;margin:2rem auto 1.5rem;border:0;max-width:var(--wide)}
+.hype .fact{display:block;flex:1 1 15rem;background:var(--yellow);padding:1rem 1.15rem 1.05rem;border:0;border-radius:10px;transform:rotate(-1.2deg)}
+.hype .fact:nth-child(2){background:var(--pink);transform:rotate(.9deg)}
+.hype .fact:nth-child(3){background:#fff;outline:2px solid var(--ink);outline-offset:-2px;transform:rotate(-.5deg)}
+.hype .fact .big{display:block;color:var(--ink);font-size:2.7rem;margin-bottom:.3rem}
+.hype .fact p{font-size:.98rem}
+
+/* crate dividers instead of rules */
+section{border-top:0}
+section.trk{position:relative;padding-top:4.6rem;margin-top:1.25rem}
+section.trk::before{content:attr(data-trk);position:absolute;top:0;left:0;height:2.45rem;padding:0 1.1rem;display:flex;align-items:center;background:var(--ink);color:#fff;
+  font-weight:850;font-stretch:74%;font-size:1.2rem;border-radius:9px 9px 0 0;white-space:nowrap;max-width:100%;overflow:hidden}
+section.trk::after{content:"";position:absolute;top:2.45rem;left:0;right:0;height:6px;background:var(--ink)}
+section.inv.trk::before{background:var(--pink);color:var(--ink)}
+section.inv.trk::after{background:var(--pink)}
+section.inv{padding-bottom:3.5rem}
+
+/* shelf talkers */
+.why{background:#fff;border:2px solid var(--ink);padding:1rem 1.1rem .9rem;position:relative;margin-top:1.2rem;transform:rotate(-.35deg)}
+.why::before{content:"";position:absolute;top:-.7rem;left:50%;width:4.6rem;height:1.25rem;background:rgba(255,210,63,.9);transform:translateX(-50%) rotate(-3deg)}
+.why b{color:var(--blue)}
+#t-lessons .takes{max-width:var(--wide);grid-template-columns:repeat(2,minmax(0,1fr));gap:1.6rem 1.8rem}
+@media (max-width:700px){#t-lessons .takes{grid-template-columns:1fr}}
+.takes li{display:block;background:#fff;color:var(--ink);padding:1.3rem 1.2rem 1.15rem;position:relative;transform:rotate(-.6deg)}
+.takes li:nth-child(even){transform:rotate(.6deg)}
+section.inv .takes li::before,.takes li::before{content:"Staff pick #" counter(t);display:inline-block;background:var(--yellow);color:var(--ink);font-size:.85rem;font-weight:850;font-stretch:85%;padding:.15rem .55rem;margin-bottom:.6rem;line-height:1.35}
+.takes li a{color:var(--ink)}
+
+/* "Fan survey" price-sticker label */
+.sv{display:inline-block;background:var(--yellow);color:var(--ink);padding:.06rem .45rem;transform:rotate(-2deg);font-size:.8rem;margin-right:.45rem}
+.sv::after{content:""}
+
+/* walnut record-store wall, sections on cream cards */
+:root{--card:#FBF6EC;--surface:#FBF6EC;--paper:#FBF6EC;--muted:#5A4E3F;--line:#D3C0A0;--track:#E6D7BC;--walnut:#4A2E1D}
+body{background-color:var(--walnut);
+  background-image:
+    repeating-linear-gradient(90deg,rgba(0,0,0,.34) 0 2px,transparent 2px 200px),
+    repeating-linear-gradient(90deg,rgba(255,220,180,.045) 0 1px,transparent 1px 4px,rgba(0,0,0,.06) 4px 5px,transparent 5px 9px,rgba(255,220,180,.03) 9px 10px,transparent 10px 17px),
+    repeating-linear-gradient(90deg,#4A2E1D 0 200px,#563622 200px 400px,#43291A 400px 600px,#50321F 600px 800px)}
+.pbars .bar.dim{background:#BBA582}
+.back,.why,.takes li,.hype .fact:nth-child(3){background:var(--card)}
+.back{box-shadow:0 18px 30px -18px rgba(0,0,0,.7)}
+.hype .fact{box-shadow:0 10px 18px -12px rgba(0,0,0,.7)}
+.hype .fact:nth-child(3){outline:0}
+section.trk,body>section{background:var(--card);padding:2.4rem clamp(1rem,4vw,2.75rem) 2.75rem;margin-top:4.25rem;border-top:6px solid var(--ink);
+  box-shadow:0 18px 34px -20px rgba(0,0,0,.75);position:relative}
+section.trk::before{top:calc(-2.45rem - 6px);left:clamp(1rem,4vw,2.75rem)}
+section.trk::after{display:none}
+section.inv.trk{background:var(--blue);box-shadow:0 18px 34px -20px rgba(0,0,0,.75);clip-path:none;border-top-color:var(--pink);padding-bottom:3rem}
+section.inv .takes li{box-shadow:0 8px 16px -10px rgba(0,0,0,.5)}
+</style>
+<style>
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0} img{max-width:100%} [hidden]{display:none!important}
+.backbar{max-width:var(--wide);margin:0 auto 1.25rem;padding-top:1.25rem}
+.backbar a{display:inline-flex;align-items:center;gap:.5rem;background:var(--card);color:var(--ink);font-weight:800;font-size:.9rem;
+  text-decoration:none;padding:.45rem .9rem;border-top:4px solid var(--ink);box-shadow:0 10px 18px -12px rgba(0,0,0,.7)}
+.backbar a:hover{background:var(--yellow)}
+</style>
+</head>
+<body>
+<nav class="backbar" aria-label="Site"><a href="index.html">Back to the record shop</a></nav>
+<div class="store">
+  <div class="record">
+    <div class="vinyl" aria-hidden="true"><span>Before the Line<br>Side A</span></div>
+    <div class="sleeve">
+      <div class="top"><span>Before the Line</span><span>Breakout file 01</span></div>
+      <div>
+        <p class="eyebrow">Laufey · jazz-pop · from Reykjavík to Berklee to arenas</p>
+        <h1><span class="script">From the Start</span> How Laufey Used Social Media to Build a Fanbase and Bring Gen Z to Jazz</h1>
+      </div>
+      <div class="price">New arrival<small>Oct 2026</small></div>
+    </div>
+  </div>
+  <div class="back">
+    <p class="dek">Lockdown covers, more than a TikTok a day and a weekly livestream took her from about 3 million monthly listeners to two sold-out nights at Madison Square Garden, and sent a generation of new fans to Chet Baker and Ella Fitzgerald along the way.</p>
+    <p class="byline">By Gordon Anderson<span>Oct. 26, 2026</span></p>
+    <nav class="tracks" aria-label="Sections">
+      <div class="side"><p class="side-name">Side A · The story</p><ol>
+        <li><a href="#t-hook"><span>A1</span>Nashville, October 2025</a></li>
+        <li><a href="#t-curve"><span>A2</span>The listener curve</a></li>
+        <li><a href="#t-steps"><span>A3</span>Five growth steps</a></li>
+        <li><a href="#t-why"><span>A4</span>Why it worked</a></li>
+        <li><a href="#t-after"><span>A5</span>After the breakout</a></li>
+        <li><a href="#t-funnel"><span>A6</span>The fan funnel</a></li>
+      </ol></div>
+      <div class="side"><p class="side-name">Side B · The numbers</p><ol>
+        <li><a href="#t-peers"><span>B1</span>Three artists who broke at the same time</a></li>
+        <li><a href="#t-size"><span>B2</span>Artists her size</a></li>
+        <li><a href="#t-index"><span>B3</span>Fan Intensity Index</a></li>
+        <li><a href="#t-jazz"><span>B4</span>Opening the door to jazz</a></li>
+        <li><a href="#t-deals"><span>B5</span>The deal arc</a></li>
+        <li><a href="#t-lessons"><span>B6</span>What I'd look for</a></li>
+        <li><a href="#t-tree"><span>B7</span>The family tree</a></li>
+      </ol></div>
+    </nav>
+    <div class="barcode-row"><span>Laufey Fan Survey · 84 respondents<br>Data pulled Oct 2026</span><div class="barcode" aria-hidden="true"></div></div>
+  </div>
+</div>
+
+<div class="facts hype">
+  <div class="fact"><span class="big">51.5%</span><p>of her Spotify monthly listeners follow her, against 36.5% for the median artist her size. She's ahead of 156 of 217.</p></div>
+  <div class="fact"><span class="big">2 years</span><p>from the Theatre at Ace Hotel (2,214 seats, her biggest room in fall 2023) to two sold-out nights at Madison Square Garden (October 2025).</p></div>
+  <div class="fact"><span class="big">85%</span><p>of surveyed fans who weren't jazz listeners say she got them into jazz. Laufey Fan Survey, 84 respondents.</p></div>
+</div>
+
+<!-- Hook -->
+<section id="t-hook" data-trk="A1 · Nashville" class="col trk">
+  <div class="sec-head">
+    <p class="eyebrow">Nashville · October 13, 2025</p>
+    <h2>Thousands of people, one name on the marquee</h2>
+  </div>
+  <div class="prose">
+    <div class="me">
+      <span class="who">Gordon</span>
+      <p>In October 2025 my school took a senior trip to Nashville. I had no idea Laufey was playing there that weekend until we got there. Walking past the Predators' arena one day, I saw thousands of her fans lined up to pack a sold-out show. It was crazy to me, thinking back to when I first heard “Valentine” and she was barely on anyone's radar.</p>
+    </div>
+    <figure class="photo">
+      <img src="nashville-line.jpg" alt="Crowds of fans filling the plaza outside Bridgestone Arena in Nashville before Laufey's sold-out show" width="1179" height="1149">
+      <figcaption>Outside Bridgestone Arena before the show, October 13, 2025. Photo: Gordon Anderson.</figcaption>
+    </figure>
+    <p>Two days later she played the first of two sold-out nights at Madison Square Garden. When I first heard her in late 2022, she had about 3 million monthly listeners and had never charted on the Billboard 200. This page traces what happened in between and why it worked, using archived Spotify and TikTok data, my own Chartmetric pulls and the Laufey Fan Survey (84 respondents, October 2026). At the end, I lay out what I'd look for when scouting the next one.</p>
+  </div>
+</section>
+
+<!-- Curve -->
+<section id="t-curve" data-trk="A2 · The curve" class="wide trk">
+  <div class="sec-head col" style="margin-inline:0">
+    <p class="eyebrow">The curve</p>
+    <h2>Listeners spiked and settled. The fanbase kept climbing.</h2>
+  </div>
+  <figure>
+    <p class="fig-title">Laufey · Spotify monthly listeners (millions), 2020–2026</p>
+    <div class="chart" id="curve"><div class="tip" id="curve-tip" hidden></div></div>
+    <ol class="moments">
+      <li><span>1</span><span class="k">“It Could Happen to You” cover goes viral on Instagram · Mar 2020</span></li>
+      <li><span>2</span><span class="k">“Valentine” out; V of BTS shares “Like the Movies” · Feb 2022</span></li>
+      <li><span>3</span><span class="k">Debut album <i>Everything I Know About Love</i> · Aug 2022</span></li>
+      <li><span>4</span><span class="k">“From the Start” out · May 2023</span></li>
+      <li><span>5</span><span class="k"><i>Bewitched</i> out · Sep 2023</span></li>
+      <li><span>6</span><span class="k"><i>A Matter of Time</i> out · Aug 2025</span></li>
+      <li><span>7</span><span class="k">The line in Nashville · Oct 2025</span></li>
+    </ol>
+    <figcaption>Each point is the monthly listener count shown on her Spotify page that day, read from 78 archived copies of the page (Wayback Machine), plus my own Chartmetric pulls (Feb and Sep 2023, Oct 2026). Spotify counts listeners over the past 28 days, so each December spike from her holiday songs builds over a few weeks and fades by February. No archived copy shows December 2025, so that peak comes from ChartMasters (passed 47M on Dec 26, 2025) and kworb (47.3M all-time high). The numbered lines match the list under the chart. The cover (1) went viral before the first archived reading, so it sits ahead of the curve.</figcaption>
+  </figure>
+  <div class="col prose" style="margin-top:1.5rem;margin-inline:0">
+    <p>Her listener count swings hard every December, when her holiday songs go into heavy rotation. Over two weeks in December 2024 she went from 27 million to 43 million listeners, and on December 26, 2025 she passed 47 million, her all-time high. Those spikes fade within about a month. The rest of the year tells a steadier story: about 13 million through most of 2024, about 15 million in spring 2025, then a step up to about 24 million once <i>A Matter of Time</i> and the arena tour arrived, settling at 21.7 million today. Through those dips she sold out Radio City, the Royal Albert Hall and the Hollywood Bowl, then sold more than 250,000 arena tickets before her next album was even out. Listener counts track the current moment. Followers, sales and tickets track how many people are actually committed.</p>
+  </div>
+</section>
+
+<!-- Five steps -->
+<section id="t-steps" data-trk="A3 · Five growth steps" class="col trk">
+  <div class="sec-head">
+    <p class="eyebrow">Five growth steps</p>
+    <h2>Six years, and each step built on the last</h2>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="yr"><span>2020–21</span></div>
+      <div><h3>A seed audience</h3>
+        <p>Home from Berklee during the pandemic, she posted a cello-and-vocal cover of “It Could Happen to You” on Instagram and went from about 1,000 followers to about 10,000. Her debut single “Street by Street” went to #1 on Icelandic radio. While she had only two self-released singles out, she took meetings with labels and managers without signing anything, which she later called “a second education.”</p>
+        <p class="num mono">~10K Instagram followers · 100K streams in month one</p>
+        <p class="why"><b>Why it worked.</b> A 20-year-old singing jazz standards over her own cello was something people hadn't seen, it landed while everyone was stuck at home, and she kept showing up: about four TikToks a week, plus a livestream every Sunday.</p>
+        <p class="num"><span class="sv">Fan survey</span> 10 of 84 fans were already listening by 2021, several hooked by early covers like “I Wish You Love” and “Love to Keep Me Warm.”</p></div>
+    </div>
+    <div class="step">
+      <div class="yr"><span>2022</span></div>
+      <div><h3>The first real growth</h3>
+        <p>V of BTS shared “Like the Movies” in February. “Valentine” came out on Valentine's Day after an unfinished TikTok clip took off. In April she signed a global deal with AWAL and kept her masters. Her debut album missed the Billboard 200 entirely, but she ended the year as Spotify's most-streamed jazz artist.</p>
+        <p class="num mono">~3M monthly listeners · ~700K TikTok followers by year end</p>
+        <p class="why"><b>Why it worked.</b> She tried songs out on fans before finishing them, and from April she went from about one TikTok every other day to more than one a day. Her TikTok following nearly doubled in seven months, from 360,000 to 694,000.</p>
+        <p class="num"><span class="sv">Fan survey</span> Most of the 21 fans who started by 2022 were hooked by the debut-era songs: “Valentine,” “Falling Behind,” “Let You Break My Heart Again” and <i>Everything I Know About Love</i>.</p></div>
+    </div>
+    <div class="step">
+      <div class="yr"><span>2023</span></div>
+      <div><h3>“From the Start” and <i>Bewitched</i>: the defining moment</h3>
+        <p>This is the moment that blew her up. “From the Start” came out in May as the first single from <i>Bewitched</i>, hit 1 million streams in under a day and took over TikTok. By July it was on Spotify's US and global charts, and it is still her biggest song by far, at 1.3 billion streams. The album landed in September and set Spotify's record for a jazz album's first day with 5.7 million streams, on the same day as Olivia Rodrigo's <i>GUTS</i>. Between February and September her monthly listeners went from 3,194,077 to 13,484,506, more than four times over.</p>
+        <p class="num mono">3.2M to 13.5M listeners · Billboard 200 #23 debut · first-ever chart entry</p>
+        <p class="why"><b>Why it worked.</b> She kept posting about 1.6 TikToks a day through the whole run. An official sped-up version of “From the Start” came out in late July, right as the song reached the US chart. The weekend <i>Bewitched</i> came out, A Very Laufey Day gave fans something to do, and they made more than 40,000 TikToks.</p>
+        <p class="num"><span class="sv">Fan survey</span> 2023 was the biggest year for new fans: 33 of 84 started listening then. Across all years, 35 of 84 named “From the Start” or <i>Bewitched</i> as what got them hooked, more than any other song or album. The most common way 2023 fans found her was a friend or family member (11 of 33). TikTok brought in 5.</p></div>
+    </div>
+    <div class="step">
+      <div class="yr"><span>2024</span></div>
+      <div><h3>Listeners dip, rooms grow</h3>
+        <p>She won her first Grammy in February, the youngest winner ever in Best Traditional Pop Vocal Album. The <i>Goddess</i> deluxe pushed <i>Bewitched</i> to a new peak, and the whole tour sold out in minutes. She played a sold-out Hollywood Bowl with the LA Phil, which became a concert film.</p>
+        <p class="num mono">Radio City: 11,894 tickets over two nights · Hollywood Bowl ~17,000</p>
+        <p class="why"><b>Why it worked.</b> She could afford to post less. Touring, she dropped to about one TikTok every two days by late 2024, and her following still grew from 5.8 million to 7.3 million in about five months. The audience she built online was now showing up in person.</p>
+        <p class="num"><span class="sv">Fan survey</span> Half of the 14 fans who started in 2024 (7 of 14) were hooked by “From the Start” or <i>Bewitched</i>, a year or more after release. The catalog kept recruiting after the spike.</p></div>
+    </div>
+    <div class="step">
+      <div class="yr"><span>2025–26</span></div>
+      <div><h3>An arena artist</h3>
+        <p><i>A Matter of Time</i> debuted at #4 with 99,000 units, more than four times her previous album's first week. A fan-made remix brought “From the Start” back to the global chart two years after release. A 70-show arena tour ran from September 2025 to September 2026, with a second Grammy along the way. Four days after the tour ended, she signed with Interscope/Verve.</p>
+        <p class="num mono">250K+ North American tickets sold before the album came out</p>
+        <p class="why"><b>Why it worked.</b> When fans turned a remix of “From the Start” into a dance trend, she joined in instead of ignoring it. For the album release she brought A Very Laufey Day onto TikTok LIVE, streamed from Los Angeles to an account that had 8.8 million followers by then.</p>
+        <p class="num"><span class="sv">Fan survey</span> 14 of 84 fans started in 2025 or 2026, hooked by <i>A Matter of Time</i>, “Lover Girl” and “Madwoman.” Six years in, she's still bringing in new fans.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Why it worked -->
+<section id="t-why" data-trk="A4 · Why it worked" class="col trk">
+  <div class="sec-head">
+    <p class="eyebrow">Why it worked</p>
+    <h2>She built the audience one video at a time</h2>
+  </div>
+  <div class="prose">
+    <h3 class="sub" style="margin-top:0">The covers: something nobody had seen</h3>
+    <p>When Berklee sent everyone home in March 2020, Laufey gave herself a job.</p>
+    <p class="quote">“I'm just going to write and post as many videos online of me singing jazz standards as I can. I'll just see where it takes me.”<small>Laufey to Billboard, January 2024</small></p>
+    <p>The first ones to catch on were “It Could Happen to You,” sung over her own cello, and “I Wish You Love.” I think they worked for three reasons at once. The combination was new: as she put it, people watching were thinking, “Why is this girl, this young woman, playing cello and singing?” The songs were already proven: standards have lasted 70 years because they're great songs, and her manager points out that almost everyone has some memory of jazz or classical music, even if they never chose it. And the timing was perfect. Everyone was home with time to watch, and TikTok was the most downloaded app of 2020. She called it “the perfect storm.”</p>
+
+    <h3 class="sub">The volume: more than one TikTok a day</h3>
+  </div>
+  <figure style="margin-top:1rem">
+    <p class="fig-title">TikToks posted per day, and followers at the end of each stretch</p>
+    <div class="chart" id="posting"><div class="tip" id="posting-tip" hidden></div></div>
+    <figcaption>Read from archived copies of her TikTok profile (Wayback Machine), which show her total video and follower counts on the day each copy was saved. The first stretch starts at her oldest video still up, March 19, 2020; deleted videos aren't counted.</figcaption>
+  </figure>
+  <div class="prose" style="margin-top:1.25rem">
+    <p>The archived profiles show how much she actually posted. From April 2022 to October 2023, the stretch that covers “Valentine,” her debut album and “From the Start,” she posted 814 videos in 547 days, about one and a half a day. Her TikTok following went from 360,000 to 3.1 million over the same stretch. Plenty of those videos weren't songs. They were bits with her twin sister Junia, reactions to fan videos and pieces of her day, which made the account feel like a person you were following. That shows up in the data on this page: she has 2.4 TikTok followers for every video made with her music, more than almost any artist her size. Once the arena tours started she slowed to about one video every two days, and by then the fanbase was carrying itself.</p>
+    <p>In my capstone I laid out the playbook U.S. labels run on TikTok: build a hook that grabs people in the first three seconds, send the song to influencers, post the same clip on every platform, then pitch Spotify's playlist editors. The whole chain is designed to create momentum that looks organic. Laufey built the real thing herself, on her own account, years before she signed with a major label.</p>
+
+    <h3 class="sub">The livestreams: a jazz club in your bedroom</h3>
+    <p>In 2021 she was going live on Instagram at least once a week, with a standing show every Sunday at 6 p.m. called “Lullabies with Laufey,” where she just sang jazz songs. She compared it to a jazz club: small, spontaneous, the performer right in front of you.</p>
+    <p class="quote">“I feel so much more connected to my fans… I'm just so honored to have people watching me practice every week.”<small>Laufey to From the Intercom, April 2021</small></p>
+    <p>The streams also worked as a test run. How fans reacted told her which songs were worth taking into the studio. “I Wish You Love” started as a cover she shared online and ended up on her first EP. “Valentine” started as an unfinished TikTok. Four years later she was doing the same thing on a much bigger stage: A Very Laufey Day 2025 was streamed on TikTok LIVE from Los Angeles.</p>
+    <p>That lines up with a study I used in my capstone. Mallard (2023) followed independent artists' TikToks and Spotify numbers and found that the ones who turned the most TikTok followers into Spotify listeners were the ones who told fans about upcoming music and made it interactive. Weekly livestreams and unfinished clips do both.</p>
+
+    <h3 class="sub">The intimacy: she does it herself</h3>
+    <p>She runs her own accounts. Before releases she has posted the sheet music, asked musician fans to learn the song without hearing it, and reposted their versions. She runs a book club. The weekend <i>Bewitched</i> came out she drove around LA rolling down her window to say hi to fans dressed like her. When she played Rockwood Music Hall in New York after lockdown and heard there was a line outside, she was confused, because coming from symphony concerts, “nobody lines up like that.” That was the first sign that the people watching her online would show up in person. By 2025 it was two sold-out nights at Madison Square Garden.</p>
+    <p><span class="sv">Fan survey</span> TikTok was one of the three main ways fans found her (18 of 84, tied with friends or family and one behind YouTube at 19), and Instagram brought in 10 more. That's a third of respondents (28 of 84) coming in through her two main accounts.</p>
+
+    <h3 class="sub">The result: followers who stay</h3>
+  </div>
+  <figure style="margin-top:1rem">
+    <p class="fig-title">TikTok and Instagram followers, 2020–2026</p>
+    <div class="legend"><span><i style="background:var(--accent)"></i>TikTok</span><span><i style="background:var(--series2)"></i>Instagram</span></div>
+    <div class="chart" id="social"><div class="tip" id="social-tip" hidden></div></div>
+    <figcaption>Each dot is one reading. Many come from archived copies of her TikTok and Instagram profiles (Wayback Machine); Instagram's pages round to the nearest million above 1M. The March 2020 Instagram figure is her own estimate from interviews. The 2025–26 TikTok readings and the Instagram readings between archived copies are single press reports, usually rounded (Music Week, TikTok Newsroom, Reykjavík Grapevine, Vísir, W Magazine, Airmail, Marie Claire Taiwan). Dashed segments cover stretches of ten months or more with no reading. Three Instagram figures that conflict with the other readings are left out: 2.2M in April 2024 (Newcity), 7M in April 2026 (Reykjavík Grapevine) and “nearly ten million” in May 2026 (Bella).</figcaption>
+  </figure>
+  <div class="prose" style="margin-top:1.25rem">
+    <p>TikTok grew fastest in 2023, the year of “From the Start,” going from about 950,000 followers in March to 3.1 million that October. Instagram's biggest jump came a year later. It went from about 2 million in January 2024 to about 4.4 million by August and around 5 million by late October, the year she won her first Grammy and toured <i>Bewitched</i>. Followers don't swing with the seasons the way her listener count does. Both lines keep climbing, with no December spikes, to 11.1 million on TikTok and 9.6 million on Instagram today.</p>
+  </div>
+</section>
+
+<!-- Twist -->
+<section id="t-after" data-trk="A5 · After the breakout" class="col trk">
+  <div class="sec-head">
+    <p class="eyebrow">After the breakout</p>
+    <h2>What she built after the spike</h2>
+  </div>
+  <figure>
+    <p class="fig-title">How much each measure grew after the 2023 breakout (fall 2023 to 2025–26)</p>
+    <div class="chart" id="lift"><div class="tip" id="lift-tip" hidden></div></div>
+    <figcaption>Listeners: 13.5M (Sep 2023) to 21.7M (Oct 2026). Headline room: 2,214 seats (Theatre at Ace Hotel, fall 2023) to ~22,000 (Madison Square Garden, Oct 2025). Album first week: 23K units (<i>Bewitched</i>) to 99K (<i>A Matter of Time</i>). TikTok followers: ~3M (Oct 2023) to 11.1M (Oct 2026). The Ace Hotel was the biggest room on her fall 2023 tour, which otherwise played rooms of about 500 to 1,500. Its capacity is listed as 2,214 (the original seat count) or about 1,600 today, and I used 2,214 so the growth isn't overstated.</figcaption>
+  </figure>
+  <div class="prose" style="margin-top:1.5rem">
+    <p>My capstone stopped at the spike. It measured how much each artist's Spotify listeners grew during their TikTok moment, and Laufey's grew 322% between February and September 2023. This page picks up where that left off.</p>
+    <p>Plenty of artists have a 2023 like hers and then fade. What makes Laufey different is what happened next. Her listener count grew about 1.6× after the breakout. Every measure of committed fans grew much faster: the rooms she sells out, the albums people buy in the first week, the people who follow her on TikTok.</p>
+    <p class="lede">The viral moment got people in the door. What she built afterwards is why they stayed.</p>
+  </div>
+</section>
+
+<!-- Funnel -->
+<section id="t-funnel" data-trk="A6 · The fan funnel" class="wide trk">
+  <div class="sec-head col" style="margin-inline:0">
+    <p class="eyebrow">The fan funnel</p>
+    <h2>I was one of the data points</h2>
+    <p class="note" style="max-width:60ch">On the left, how I went from hearing one song to standing outside her arena. On the right, the numbers that show millions of people taking the same path. Below, the fan survey shows the same path in other fans.</p>
+  </div>
+  <div class="funnel">
+    <div class="stage">
+      <div class="story"><p class="when">Late 2022 · Casual listener</p><h3>A few songs on rotation</h3>
+        <p>I think it was late 2022 when I first heard “Valentine.” It was fun and jazzy, a bit different from most of the music blowing up at the time. From there I found “Let You Break My Heart Again” and “Falling Behind,” and both went into my regular rotation. I didn't really dig into the rest of her music yet.</p></div>
+      <div class="data">
+        <div class="pbars" role="img" aria-label="About 3 million monthly listeners in late 2022, 21.7 million today"><small>Late 2022 · ~3M listeners</small><span class="bar dim" style="width:13.8%"></span><small>Today · 21.7M</small><span class="bar" style="width:100%"></span></div>
+        <p>When I found her she had about <b>3 million</b> monthly listeners and had never charted on the Billboard 200. Today she has 21.7 million.</p></div>
+    </div>
+    <div class="stage">
+      <div class="story"><p class="when">May–September 2023 · “From the Start” to <i>Bewitched</i></p><h3>The moment it clicked</h3>
+        <p>Then “From the Start” came out, and to me that was her first big mainstream moment. I loved it from the first listen. I was following her on Instagram and saw her promoting a new album for September. It was dropping the same day as Olivia Rodrigo's <i>GUTS</i>, so I was really excited for that night of new music. Looking back, it was one of the best weeks for new music in recent memory, with Mitski's <i>The Land Is Inhospitable and So Are We</i> coming a week later. That was three really important albums for 19-year-old me, all in a few weeks.</p>
+        <p style="margin-top:.8rem">At first <i>Bewitched</i> got a little overshadowed by how much I loved <i>GUTS</i>. On my first listen, “Dreamer” stood out for its jazzy elements and “Lovesick” for its big chorus. Over the next couple of weeks I kept coming back to it, until I liked every song on the album. That's what makes it so impressive to me. It came out the same day as one of the biggest pop albums of the year and could easily have been buried, and people still kept finding their way back to it, just like I did.</p></div>
+      <div class="data">
+        <p>“From the Start” has <b>1.3 billion</b> Spotify streams, more than twice her next-biggest song.</p>
+        <div class="pbars" role="img" aria-label="First-day Spotify streams for a jazz album: previous record 1.1 million, Bewitched 5.7 million"><small>Previous jazz record · 1.1M</small><span class="bar dim" style="width:19.3%"></span><small><i>Bewitched</i>, day one · 5.7M</small><span class="bar" style="width:100%"></span></div>
+        <p><i>Bewitched</i> drew <b>5.7 million</b> Spotify streams on its first day, the biggest ever for a jazz album. The previous record was 1.1 million.</p>
+        <p>It did that on the same day as <i>GUTS</i>, which debuted at <b>#1</b> on the Billboard 200 with 302,000 units. <i>Bewitched</i> still entered at #23, her first time on the chart.</p></div>
+    </div>
+    <div class="stage">
+      <div class="story"><p class="when">2023–24 · The deep dive</p><h3>Back to the beginning</h3>
+        <p>After that album I was hooked. I went back and listened to everything from the beginning, and I loved the deluxe that came out months later, which had two of her best songs, “Goddess” and “Bored.”</p></div>
+      <div class="data">
+        <div class="meter" role="img" aria-label="Laufey 51.5 percent, median artist her size 36.5 percent"><span class="fill" style="width:51.5%"></span><span class="med" style="left:36.5%"></span></div>
+        <p><b>51.5%</b> of her monthly listeners also follow her on Spotify (11.2M of 21.7M), against 36.5% for the median artist her size (the tick). Following is a deliberate step that casual listeners rarely take. The artists level with her include blink-182 and Elvis Presley, acts with decades of fans behind them.</p>
+        <p>When the deluxe came out, seven months after release, <i>Bewitched</i> climbed to a new Billboard 200 peak of <b>#18</b>.</p></div>
+    </div>
+    <div class="stage">
+      <div class="story"><p class="when">2024 · Superfan</p><h3>Number one artist of the year</h3>
+        <p>Laufey ended up being my number one artist of 2024, and I picked up several of her records for my collection.</p></div>
+      <div class="data">
+        <div>
+          <figure class="photo" style="max-width:15rem">
+            <img src="wrapped-2024.jpg" alt="Spotify Wrapped 2024 story card reading: Laufey was your top artist of the year" width="640" height="1136" loading="lazy">
+            <figcaption>My Spotify Wrapped, 2024.</figcaption>
+          </figure>
+        </div>
+        <div class="pbars" role="img" aria-label="Record Store Day pressings: 4,200 copies in 2024, 17,000 in 2026"><small>Record Store Day 2024 · 4.2K copies</small><span class="bar dim" style="width:24.7%"></span><small>Record Store Day 2026 · 17K</small><span class="bar" style="width:100%"></span></div>
+        <p>Her Record Store Day pressings grew from <b>4,200 copies</b> in 2024 to 17,000 in 2026, and her 2026 live album was the #5 RSD exclusive in the US.</p>
+        <p><b>72%</b> of <i>A Matter of Time</i>'s first week came from people buying the album: 71K of 99K units.</p></div>
+    </div>
+    <div class="stage">
+      <div class="story"><p class="when">October 2025 · The arena</p><h3>Bridgestone Arena, sold out</h3>
+        <p>Seeing that line in Nashville is when it really hit me how big she had gotten. Getting to watch her grow the whole way was amazing, and I loved being a part of it.</p></div>
+      <div class="data">
+        <p>Her biggest headline room grew about <b>ten times</b> between 2023 and 2025. Her listeners grew less than twice over the same period.</p>
+        <p>She sold <b>1.8</b> North American arena tickets for every 100 monthly listeners, before the album was even out.</p></div>
+    </div>
+  </div>
+
+  <figure style="margin-top:2.5rem">
+    <p class="fig-title"><span class="sv">Fan survey</span> Share of fans who have seen her live, by the year they started listening</p>
+    <div class="chart" id="sv-cohort"><div class="tip" id="sv-cohort-tip" hidden></div></div>
+    <figcaption>84 fans, October 2026. Fans who started by 2022 (23), in 2023 (33), in 2024 (14) and in 2025–26 (14).</figcaption>
+  </figure>
+  <div class="col prose" style="margin-top:1.25rem;margin-inline:0">
+    <p>The funnel shows up in the fan survey too. The longer someone has been a fan, the further along they are. 70% of fans who started by 2022 have seen her live and 74% own a vinyl or CD. For fans who started in 2025 or 2026, it's 14% and 29%, and more than a third haven't done any of those things yet. Converting a new fan takes time, so the fans she gained in 2025 are the next tour's audience.</p>
+  </div>
+
+  <figure style="margin-top:2.5rem">
+    <p class="fig-title">Headline venue capacity, 2023–2026</p>
+    <div class="chart scroll" id="rooms"><div class="tip" id="rooms-tip" hidden></div></div>
+    <figcaption>Capacity or reported attendance per night. Sources: Iceland Monitor, Pollstar, Boston.com, The Line of Best Fit, Variety, The Hollywood Reporter, Grapevine, uDiscover. Every show listed was reported sold out, except the Mexico City finale, where attendance was reported.</figcaption>
+  </figure>
+</section>
+
+<!-- Peers -->
+<section id="t-peers" data-trk="B1 · Same moment" class="wide trk">
+  <div class="sec-head col" style="margin-inline:0">
+    <p class="eyebrow">Same size, same moment</p>
+    <h2>Three artists who broke at the same time</h2>
+    <p class="note" style="max-width:62ch">Lizzy McAlpine, Noah Kahan and Megan Moroney all had a TikTok breakout in 2022 or 2023, starting from a similar or smaller audience. Three years later, they look very different.</p>
+    <p class="note" style="max-width:62ch">Together with Laufey, these are the four U.S. artists from my capstone, which looked at how TikTok virality turned into Spotify listeners. There I measured each artist's spike. Here I'm looking at where they ended up three years later.</p>
+  </div>
+  <div class="scroll">
+    <table class="peers">
+      <thead><tr><th>Artist</th><th>Breakout</th><th>Listeners going in</th><th>Growth during the TikTok spike</th><th>Label path</th><th>Listeners now</th><th>Biggest headline room</th><th>Latest album debut</th></tr></thead>
+      <tbody>
+        <tr class="hi"><td>Laufey</td><td>“From the Start,” then <i>Bewitched</i><small>2023</small></td><td class="mono">3.19M<small>Feb 2023</small></td><td class="mono">+322%<small>Feb–Sep 2023 · 7 months</small></td><td>AWAL (kept her masters), then Interscope/Verve<small>major deal Sep 2026</small></td><td class="mono">21.7M</td><td>Madison Square Garden ×2<small>~22,000 · Oct 2025</small></td><td>#4 · 99K units<small><i>A Matter of Time</i>, 2025</small></td></tr>
+        <tr><td>Lizzy McAlpine</td><td>“ceilings”<small>early 2023</small></td><td class="mono">3.62M<small>Feb 2023</small></td><td class="mono">+385%<small>Feb–Mar 2023 · 5 weeks</small></td><td>AWAL, then RCA<small>major deal 2023</small></td><td class="mono">15.5M</td><td>3Arena, Dublin<small>~13,000 · Oct 2024</small></td><td>#93<small><i>Older</i>, 2024 · <i>Angel</i> out Sep 2026</small></td></tr>
+        <tr><td>Noah Kahan</td><td>“Stick Season”<small>2022</small></td><td class="mono">4.50M<small>Jul 2022</small></td><td class="mono">+88%<small>Jul–Nov 2022 · 4 months</small></td><td>Republic<small>major since 2017</small></td><td class="mono">35.1M</td><td>Fenway Park ×4<small>37,755 · Jul 2026</small></td><td>#1 · 389K units<small><i>The Great Divide</i>, 2026</small></td></tr>
+        <tr><td>Megan Moroney</td><td>“Tennessee Orange”<small>2022</small></td><td class="mono">0.27M<small>Aug 2022</small></td><td class="mono">+1,030%<small>Aug 2022–Jan 2023 · 5 months</small></td><td>Unsigned, then Sony Nashville/Columbia<small>major deal Nov 2022</small></td><td class="mono">8.4M</td><td>Bridgestone Arena ×2<small>~18,000 · Aug 2026</small></td><td>#1 · 147K units<small><i>Cloud 9</i>, 2026</small></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note" style="margin-top:.75rem">Listeners going in and growth during the TikTok spike come from my capstone (Chartmetric data). Growth runs from the start of each spike to the highest listener count before the artist's next release. The windows range from five weeks to seven months, and a smaller starting audience makes a big percentage easier, so the four numbers aren't a fair race against each other. Listeners now are Chartmetric snapshots from October 2026. McAlpine's 3Arena show was billed as her biggest Irish headline show, but I couldn't confirm it sold out.</p>
+
+  <div class="prose" style="margin-top:2rem">
+    <h3 class="sub" style="margin-top:0">How their paths split</h3>
+    <p>All four broke through on one TikTok-driven song while their audiences were still small. None of those songs was a big radio hit at first; each one spread because people used it in their own videos. After that, their paths split. Lizzy McAlpine is the closest twin. She went to Berklee, released on AWAL and went viral in early 2023 at about 3.6 million listeners, with an even bigger spike. Today she has 15.5 million listeners but only 2.1 million Spotify followers, and 6.3 million TikTok videos use her songs while 1.3 million people follow her there, so her songs reached more people than she did. She also signed with a major label right after the spike, while Laufey stayed independent until she was playing arenas. Noah Kahan turned his moment into the largest audience of the group, with 35 million listeners, a #1 album and more than a million stadium tickets, and he had major-label backing the whole way. His audience is the widest, but a smaller share of it follows him than Laufey's. Megan Moroney started from the smallest base and sells the most tickets for her size, with two sold-out nights at Bridgestone Arena on 8.4 million listeners. Country's radio and touring culture helps turn listeners into ticket buyers, which shows how much genre shapes these numbers.</p>
+  </div>
+  <div class="col prose" style="margin-top:1.75rem;margin-inline:0">
+    <p class="lede">Of the four, Laufey's fans seem the most attached to her as a person. She is the only one of the four with more TikTok followers than TikTok videos using her official sounds.</p>
+  </div>
+</section>
+
+<!-- Size band -->
+<section id="t-size" data-trk="B2 · Artists her size" class="wide trk">
+  <div class="sec-head col" style="margin-inline:0">
+    <p class="eyebrow">Artists her size</p>
+    <h2>Her listeners follow her everywhere</h2>
+    <p class="note" style="max-width:62ch">“Her size” here means every artist on Spotify within 15% of her monthly listeners: 18.4M to 25.0M on October 23, 2026. That's 217 other artists, from Gucci Mane to Shania Twain. For each one I pulled Spotify, Instagram and TikTok followers from Chartmetric on the same day and divided them by monthly listeners.</p>
+    <p class="note" style="max-width:62ch"><b style="color:var(--ink)">Why these 217.</b> Follow rates change with audience size, so comparing artists with about the same number of listeners takes size out of the picture. Within 15% was a balance between fair and big enough: within 5% there are only about 60 artists, too few to trust a median, and my first, wider cut of 16 to 28 million pulled in audiences of a different size. The group is every artist on kworb's Spotify ranking in that range on the same day, with no hand-picking, which is why Elvis, BLACKPINK and Indian film singers sit next to her. Almost no jazz acts are near her size, and a few breakout peers would have been a group I chose myself. The trade-off is a group that mixes genres, eras and countries.</p>
+  </div>
+  <figure>
+    <p class="fig-title">Followers per 100 monthly listeners. Each dot is one artist her size.</p>
+    <div class="chart" id="band"><div class="tip" id="band-tip" hidden></div></div>
+    <figcaption>The line in each row marks the median artist. The few artists above 150, led by BLACKPINK, are grouped at the right edge. Hover or tap a dot to see who it is. Chartmetric, Oct 23, 2026. Artists with no Instagram (5) or TikTok (38) account in Chartmetric are left out of that row.</figcaption>
+  </figure>
+  <div class="scroll" style="margin-top:1.5rem">
+    <table class="scores">
+      <thead><tr><th>Followers per 100 listeners</th><th>Laufey</th><th>Median artist her size</th><th>Top 25% starts at</th><th>Laufey is higher than</th></tr></thead>
+      <tbody>
+        <tr><td>Spotify</td><td class="mono tot">51.5</td><td class="mono">36.5</td><td class="mono">55.8</td><td class="mono">156 of 217 · 72%</td></tr>
+        <tr><td>Instagram</td><td class="mono tot">44.3</td><td class="mono">15.7</td><td class="mono">36.2</td><td class="mono">174 of 212 · 82%</td></tr>
+        <tr><td>TikTok</td><td class="mono tot">51.4</td><td class="mono">6.1</td><td class="mono">16.5</td><td class="mono">165 of 179 · 92%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose" style="margin-top:2rem">
+    <h3 class="sub" style="margin-top:0">Where she stands out most</h3>
+    <p>The biggest gap is on TikTok. The median artist her size has 6 TikTok followers for every 100 monthly listeners, and Laufey has 51, about eight times as many. Only 14 artists in the group are higher, and most are K-pop groups, Latin pop stars and rappers like BLACKPINK, Camilo and Lil Nas X, whose fanbases live on social media. More people follow her than use her songs. For most artists, far more people use their songs in TikToks than follow them: the median artist her size has 0.13 TikTok followers for every video made with their music. Laufey has 2.4, and only LE SSERAFIM is higher. For her audience size, her songs actually show up in fewer videos than most artists', but far more people follow her. One caveat: Chartmetric only counts videos that use an artist's official sounds, so sped-up versions, remixes and fan-uploaded clips are left out. That undercounts every artist in the group, so treat these video numbers as a floor. On Instagram she has 44 followers per 100 listeners, nearly three times the median of 16. Instagram is where I first saw her promoting <i>Bewitched</i>, and a lot of her listeners went looking for the person behind the music. Spotify is where the gap is smallest, because Spotify followers build up over a whole career and catalog acts like Led Zeppelin, Bob Marley and Luis Miguel get a head start. Laufey has only been releasing music since 2020 and is already higher than 7 in 10 artists her size.</p>
+  </div>
+</section>
+
+<!-- Index -->
+<section id="t-index" data-trk="B3 · Fan Intensity Index" class="wide trk">
+  <div class="sec-head col" style="margin-inline:0">
+    <p class="eyebrow">Fan Intensity Index</p>
+    <h2>How committed are her fans?</h2>
+    <p class="note" style="max-width:62ch">Monthly listeners measure how many people heard an artist recently. These three signals try to measure how many of them actually care: do they follow the artist, keep coming back to the music and listen past the biggest hit? Each signal is a ratio rather than a raw count, so a small artist can score as high as a big one. Laufey is compared with the same 217 artists her size as in the section above.</p>
+  </div>
+  <div class="prose">
+    <h3 class="sub" style="margin-top:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem 1rem">How the score works <span style="font-size:.85rem;font-weight:400;color:var(--muted)">Fan Intensity = (follow rate + listening depth + catalog breadth) ÷ 3</span></h3>
+    <p>The index averages three measures. Follow rate adds up an artist's Spotify, Instagram and TikTok followers and divides by their Spotify monthly listeners, because following is a step a casual listener rarely takes on any platform. Listening depth is Last.fm plays divided by Last.fm listeners, or how many times the average listener has played the artist. Catalog breadth is the share of an artist's Spotify streams that come from outside their top three songs, which shows whether fans are into the artist or into one hit. Each measure is turned into a percentile within the group, from 0 for the lowest artist to 100 for the highest, so one platform's huge numbers can't drown out the others. The score is the average of the three. Every input was pulled for all 218 artists on October 23, 2026, from Chartmetric, Last.fm and kworb.</p>
+  </div>
+
+  <div class="scroll" style="margin-top:1.5rem">
+    <table class="scores">
+      <thead><tr><th>Signal</th><th>Laufey</th><th>Median artist her size</th><th>Laufey's percentile</th></tr></thead>
+      <tbody>
+        <tr><td>Follow rate</td><td class="mono">147 per 100 listeners</td><td class="mono">65 per 100</td><td class="mono">90</td></tr>
+        <tr><td>Listening depth</td><td class="mono">116 plays</td><td class="mono">25 plays</td><td class="mono">95</td></tr>
+        <tr><td>Catalog breadth</td><td class="mono">68%</td><td class="mono">59%</td><td class="mono">69</td></tr>
+        <tr><td><b>Fan Intensity</b></td><td class="mono tot">84.5</td><td class="mono">53.9</td><td class="mono tot">10th of 213</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note" style="margin-top:.75rem">213 of the 218 artists have all three inputs. The other 5 are soundtrack and one-off acts, like the <i>KPop Demon Hunters</i> cast and <i>Grand Theft Auto VI</i>.</p>
+
+  <figure style="margin-top:2rem">
+    <p class="fig-title">Fan Intensity, the top 20 of 213 artists her size</p>
+    <div class="chart" id="fii"><div class="tip" id="fii-tip" hidden></div></div>
+    <figcaption>Score out of 100. Hover or tap a bar to see its three percentiles. The dashed line is the median artist (53.9).</figcaption>
+  </figure>
+
+  <div class="prose" style="margin-top:2rem">
+    <h3 class="sub" style="margin-top:0">What the score shows, and what it misses</h3>
+    <p>She ranks 10th of 213, and her two strongest signals are the most personal ones: people follow her (90th percentile) and replay her (95th). Most of the artists above her are rap, K-pop and Latin acts known for devoted fanbases, like YoungBoy Never Broke Again, BLACKPINK, LE SSERAFIM and Lil Peep, and she's the only artist in the top 10 whose music comes out of jazz.</p>
+    <p>Every input has a blind spot. Followers and plays build up over a whole career, and breadth rewards big catalogs, so all three lean toward veterans, which works against Laufey, who has only been releasing music since 2020. Last.fm users lean Western, indie and alternative, but Spotify backs up her depth score: her listeners stream her about 7.4 times a month, against 3.2 for the median artist her size. Last.fm was matched by artist name, so a few artists could be mixed up with someone of the same name. I also left two signals out on purpose. I tested live demand, using Bandsintown followers and reported ticket sales, but both mostly reward decades of touring, and real ticket numbers only exist for the biggest tours, so neither is fair across 213 artists. Her live numbers are better shown than scored: Billboard has her at 319,000 tickets across 32 shows from October 2025 to March 2026. I dropped hold, how much of an artist's peak audience is still listening, because her peak was a two-week holiday surge. And the index can't see what fans do offline. Following and streaming are free, while buying a ticket, a record or a book club membership costs something. None of that is in the index, which is why the fan survey below matters.</p>
+  </div>
+
+  <div class="col prose" style="margin-top:1.75rem;margin-inline:0">
+    <p><span class="sv">Fan survey</span> The survey adds a signal no tracker has: what fans actually do. 70 of the 84 respondents (83%) have done at least one of these: seen her live (51%), bought a vinyl or CD (50%), joined her book club or a fan community (45%), or bought merch (42%). 14 have done all four.</p>
+  </div>
+</section>
+
+<!-- Jazz impact -->
+<section id="t-jazz" data-trk="B4 · Jazz" class="wide trk">
+  <div class="sec-head col" style="margin-inline:0">
+    <p class="eyebrow">Beyond the numbers</p>
+    <h2>Opening the door to jazz</h2>
+  </div>
+  <div class="col prose" style="margin-inline:0">
+    <div class="me">
+      <span class="who">Gordon</span>
+      <p>She's gotten so many young people into jazz, including me. Listening to her, and watching interviews where she talks about the jazz legends who shaped her, got me into jazz itself. I started listening to Ella Fitzgerald and Chet Baker, and to classic standards like “Misty.”</p>
+    </div>
+    <p class="quote">“I always had this goal and dream of bringing jazz music back to my generation.”<small>Laufey to GRAMMY.com, September 2023</small></p>
+    <p>She has also said jazz has <q>so many barriers to entry</q> for young listeners, and that she wants to take them down (<a href="https://grammy.com/news/icelandic-jazz-singer-laufey-interview-new-album-bewitched">Grammy.com, 2023</a>). She names Chet Baker as one of her biggest influences and recommends him to friends who are new to jazz. Even her first viral moment in 2020 was a jazz standard, “It Could Happen to You.”</p>
+  </div>
+
+  <div class="col prose" style="margin-top:2rem;margin-inline:0">
+    <h3 class="sub" style="margin-top:0">Jazz at pop scale</h3>
+    <p>She has put up pop-sized numbers in a genre that rarely sees them. She was Spotify's most-streamed jazz artist of 2022, and <i>Bewitched</i> drew 5.7 million streams on its first day, the biggest ever for a jazz album on Spotify, against a previous record of 1.1 million. <i>Bewitched</i> was Billboard's #1 jazz album of 2024, and <i>A Matter of Time</i> was the highest Billboard 200 debut for a jazz album since 2018. She is also paying it forward. The Laufey Foundation, launched in May 2025, funds youth orchestras, including Carnegie Hall's NYO Jazz, and gets $1 from every ticket on her arena tour, and she set up a $100,000 scholarship at Syracuse in 2024. She has said the support she got as a child led directly to her career. Her new label brings it full circle: Verve Records was started in 1956 around signing Ella Fitzgerald, whose Cole Porter songbook defined the label, and in September 2026 Laufey signed with Interscope and Verve. Listener-overlap data now groups her with jazz legends like Ella Fitzgerald, Laurindo Almeida and Norah Jones, and with younger jazz-leaning artists like Samara Joy, Mei Semones, Sienna Spiro and Stacey Ryan.</p>
+  </div>
+
+  <figure style="margin-top:2rem">
+    <p class="fig-title">Did the legends grow? Spotify monthly listeners each fall, 2021–2026</p>
+    <div class="scroll">
+      <table class="scores" style="min-width:34rem">
+        <thead><tr><th>Artist</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2026</th><th>Change</th></tr></thead>
+        <tbody>
+          <tr><td>Laufey</td><td class="mono">0.6M</td><td class="mono">2.5M</td><td class="mono">12.4M</td><td class="mono">14.6M</td><td class="mono">24.6M</td><td class="mono">21.7M</td><td class="mono tot">×37</td></tr>
+          <tr><td>Chet Baker</td><td class="mono">2.2M</td><td class="mono">2.5M</td><td class="mono">3.1M</td><td class="mono">3.2M</td><td class="mono">3.0M</td><td class="mono">3.1M</td><td class="mono">+41%</td></tr>
+          <tr><td>Miles Davis</td><td class="mono">2.0M</td><td class="mono">2.3M</td><td class="mono">2.5M</td><td class="mono">2.7M</td><td class="mono">2.9M</td><td class="mono">2.7M</td><td class="mono">+35%</td></tr>
+          <tr><td>Ella Fitzgerald</td><td class="mono">4.6M</td><td class="mono">4.9M</td><td class="mono">5.0M</td><td class="mono">5.2M</td><td class="mono">4.6M</td><td class="mono">4.6M</td><td class="mono">0%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <figcaption>Read from archived copies of each artist's Spotify page (Wayback Machine), using a late-summer or fall reading each year to avoid December holiday spikes. Ella Fitzgerald's Decembers reach 17–25M from her Christmas music. Miles Davis is included as a comparison: a jazz legend outside Laufey's lane.</figcaption>
+  </figure>
+  <div class="col prose" style="margin-top:1.25rem;margin-inline:0">
+    <p>The big totals barely moved. Chet Baker's biggest one-year jump, +24%, came in 2023, the year Laufey broke, while Miles Davis grew 9% that year. That fits the idea of a Laufey effect, but Miles also grew over the full period, and Ella Fitzgerald stayed flat. Legacy catalogs this large hide individual stories like mine. So I asked fans directly.</p>
+  </div>
+
+  <div class="sec-head col" style="margin-inline:0;margin-top:3rem">
+    <p class="eyebrow">Laufey Fan Survey · 84 respondents · October 21–26, 2026</p>
+    <h3 style="font-size:clamp(1.5rem,3.4vw,2rem)">Did Laufey get you into jazz?</h3>
+  </div>
+  <div class="facts" style="margin-top:0">
+    <div class="fact"><div class="meter" role="img" aria-label="62 percent"><span class="fill" style="width:62%"></span></div>
+      <p><b>62%</b> of respondents listen to more jazz because of her (52 of 84), and 25 said “a lot more.”</p></div>
+    <div class="fact"><div class="meter" role="img" aria-label="85 percent"><span class="fill" style="width:85%"></span></div>
+      <p><b>85%</b> of the 61 fans who weren't already jazz listeners say she got them into it.</p></div>
+    <div class="fact"><div class="meter" role="img" aria-label="69 percent"><span class="fill" style="width:69%"></span></div>
+      <p><b>69%</b> of fans under 21 say she got them into jazz. Only 7 of the 45 already listened to it.</p></div>
+  </div>
+
+  <div class="pair" style="margin-top:1.75rem;align-items:start">
+    <figure>
+      <p class="fig-title">Have you listened to more jazz because of Laufey?</p>
+      <div class="chart" id="sv-jazz"><div class="tip" id="sv-jazz-tip" hidden></div></div>
+    </figure>
+    <figure>
+      <p class="fig-title">Who did they discover? Mentions among the 47 fans who named an artist</p>
+      <div class="chart" id="sv-artists"><div class="tip" id="sv-artists-tip" hidden></div></div>
+    </figure>
+  </div>
+
+  <div class="col prose" style="margin-top:1.75rem;margin-inline:0">
+    <p>Chet Baker came up more than anyone, named by 20 of the 47 fans who listed what they'd discovered. Ella Fitzgerald was second with 16. That's the same path I took, and it lines up with the Spotify data above: Chet Baker's biggest one-year jump came in 2023, the year she broke.</p>
+    <p>The effect is strongest with the youngest fans. Of the 14 respondents aged 16 and under, 9 say she got them into jazz, and only one was already a jazz listener. Fans who got into jazz through her are also more committed to her: 62% have seen her live, compared with 34% of everyone else.</p>
+  </div>
+
+  <div class="col prose" style="margin-top:1.75rem;margin-inline:0">
+    <h3 class="sub" style="margin-top:0">In their words</h3>
+    <p>Respondents' own answers point the same way. One wrote, “She inspired me to take a jazz class.” Another said, “Her cover of ‘Misty’ was definitely the first one I listened to.” A third is “now more interested in the jazz and bossa nova artists Laufey acknowledged as an influence, particularly Julie London and Luiz Bonfá.” And one fan who isn't there yet put it simply: “I don't listen to jazz… YET.”</p>
+  </div>
+
+  <div class="col prose" style="margin-top:1.5rem;margin-inline:0">
+    <p class="note">Methodology: anonymous seven-question online questionnaire, distributed on Reddit, Instagram and through personal networks, October 21–26, 2026 (n = 84). Respondents self-selected, so the sample leans toward engaged fans and doesn't represent all of her listeners. Discovery was spread out: YouTube (19), friends or family (18), TikTok (18), Spotify (13) and Instagram (10). Quotes are lightly trimmed.</p>
+  </div>
+</section>
+
+<!-- Deal arc -->
+<section id="t-deals" data-trk="B5 · The deal arc" class="col trk inv">
+  <div class="sec-head">
+    <p class="eyebrow">The deal arc</p>
+    <h2>Each deal came from a stronger position than the last</h2>
+  </div>
+  <ol class="arc">
+    <li><span class="d">2020–21</span><div>Self-releases her music while meeting labels and managers, without signing.<span class="lev">Learns the business first</span></div></li>
+    <li><span class="d">Apr 2022</span><div>Global recordings deal with AWAL, a services-style label. She owns her masters.<span class="lev">Keeps ownership</span></div></li>
+    <li><span class="d">Aug 2023</span><div>Publishing deal with Warner Chappell, a month before <i>Bewitched</i>.</div></li>
+    <li><span class="d">Nov 2023</span><div>Extends with AWAL after the record-breaking album.<span class="lev">Renews after proof</span></div></li>
+    <li><span class="d">2025</span><div>Releases move to her own imprint, Vingolf Recordings.</div></li>
+    <li><span class="d">Jul 2026</span><div>Signs with UTA for representation in all areas.</div></li>
+    <li class="big"><span class="d">Sep 16, 2026</span><div><b>Signs with Interscope/Verve</b>, her first major-label deal, four days after a 70-show arena tour ends.<span class="lev">Goes major from maximum leverage</span></div></li>
+  </ol>
+  <p class="note" style="margin-top:1rem">Terms of the Interscope/Verve deal, and why she left AWAL, have not been reported.</p>
+</section>
+
+<!-- Takeaways -->
+<section id="t-lessons" data-trk="B6 · Staff picks" class="col trk inv">
+  <div class="sec-head">
+    <p class="eyebrow">What I'd look for</p>
+    <h2>Lessons for scouting the next one</h2>
+  </div>
+  <ol class="takes">
+    <li><div><h3>Notice the spike, then watch what comes after</h3><p>“From the Start” is what put her on the map. The signals that showed she would last came after it: how fast rooms sold out, how many listeners followed her, and how much of an album debut came from people buying it. Discovery wasn't one channel either. In the fan survey, YouTube, friends or family and TikTok were within one vote of each other (23%, 21% and 21%), and for fans under 21, friends and family came first.</p></div></li>
+    <li><div><h3>Owning a small category builds credibility fast</h3><p>She was #1 on the jazz charts and won in a less crowded Grammy category. Being the clear leader of an underserved lane bought her press and prestige that a crowded pop lane would not have. It also pulls fans deeper: 62% of surveyed fans now listen to more jazz because of her.</p></div></li>
+    <li><div><h3>Consistency comes before the hit</h3><p>Before “From the Start” broke, she had already posted hundreds of TikToks and was averaging more than one a day. The breakout didn't come out of nowhere. It landed on an account people were already in the habit of watching. When I scout, I'd look at how often an artist shows up over months, and treat one video popping as a reason to keep watching.</p></div></li>
+    <li><div><h3>Test songs in public</h3><p>“Valentine” and “Falling Behind” started as rough TikToks, and her weekly livestreams told her which songs fans wanted recorded. By the time a single came out, she already knew people wanted it. An artist who shares unfinished work and listens to the response is doing early A&R on themselves.</p></div></li>
+    <li><div><h3>Rituals turn listeners into fans</h3><p>A weekly livestream, a book club, A Very Laufey Day in 75+ cities, a holiday song every year, orchestra shows. Each gave fans something to do, and each repeats on a schedule. 45% of surveyed fans have joined her book club or a fan community, and five named an orchestral or live recording as what first hooked them.</p></div></li>
+    <li><div><h3>An indie partner can win the early years</h3><p>She didn't need a major to break. She needed a partner that provided services and let her keep ownership. That's the advantage a label like Mom+Pop can offer an artist at the stage where I'd want to find them.</p></div></li>
+  </ol>
+</section>
+
+<!-- Lineage -->
+<section id="t-tree" data-trk="B7 · Family tree" class="col trk">
+  <div class="sec-head">
+    <p class="eyebrow">The family tree</p>
+    <h2>Where the Laufey branch leads</h2>
+  </div>
+  <div class="tree">
+    <div class="branch"><h3>Early co-signs</h3><div class="chips"><span class="chip">Billie Eilish</span><span class="chip">Willow</span><span class="chip">V (BTS)</span><span class="chip">dodie</span></div></div>
+    <div class="branch"><h3>Collaborators</h3><div class="chips"><span class="chip">beabadoobee</span><span class="chip">Norah Jones</span><span class="chip">Aaron Dessner</span><span class="chip">Philharmonia Orchestra</span><span class="chip">LA Phil</span></div></div>
+    <div class="branch"><h3>Same management</h3><div class="chips"><span class="chip hub">Olivia Rodrigo</span><span class="chip hub">Noah Kahan</span><span class="chip">Chappell Roan</span></div></div>
+    <div class="branch"><h3>Shared audience</h3><div class="chips"><span class="chip">Clairo</span><span class="chip">Faye Webster</span><span class="chip">Mitski</span><span class="chip">beabadoobee</span><span class="chip">Matt Maltese</span><span class="chip">The Marías</span><span class="chip">Strawberry Guy</span><span class="chip">Liana Flores</span><span class="chip">wave to earth</span><span class="chip">Malcolm Todd</span><span class="chip">Mac DeMarco</span><span class="chip">Rex Orange County</span></div></div>
+  </div>
+  <p class="note" style="margin-top:1rem">Shared-audience artists are Chartmetric's similar-artist list as of Oct 21, 2026. Highlighted names connect to her in more than one way.</p>
+</section>
+
+<!-- Closing -->
+<section id="t-close" data-trk="Liner notes" class="col trk">
+  <div class="prose">
+    <div class="me">
+      <span class="who">Gordon</span>
+      <p>When I first found Laufey, I didn't know about the mountain of work she'd put in so that people like me could find her. I also didn't know I was getting on a train early, one that would go further than I ever expected. Through my years as a fan, it's been a joy to watch her rise. She clearly has the talent of a star, but in my opinion, what matters more is her passion and love for music, and that makes people who share that passion care. You can see it in her interviews, her covers and her performances, in how much she appreciates jazz, and in the respect she shows the artists who came before her. That can't be faked, and I think it's why so many people have grown attached to her story. Standing outside that arena in Nashville, I finally saw how many people felt the same way I did. Now I want to find the next artist like that early, before the line forms.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Sources -->
+<section class="wide">
+  <div class="sec-head col" style="margin-inline:0"><p class="eyebrow">Credits and sources</p></div>
+  <div class="sources">
+    <p>Gordon Anderson, “The Impact of Social Media and TikTok Promotion on the Music Industry: A Comparison of the United States and Indonesia,” capstone research paper, Dolan School of Business, Fairfield University, April 2026. Chartmetric data pulled for it: monthly listeners before and during each artist's TikTok spike, and US audience share.</p>
+    <p>Mallard, Anna. 2023. “The Implications of TikTok Engagement on the Number of Spotify Listeners: A Study on Independent Artists.” Undergraduate thesis, Northwest University.</p>
+    <p>Chartmetric artist page, snapshot Oct 21, 2026.</p>
+    <p><a href="https://www.billboard.com/music/features/laufey-jazz-future-tiktok-gen-z-cover-story-interview-1235578792/">Billboard, “Welcome to Laufey Land,” Jan 11, 2024</a></p>
+    <p><a href="https://fromtheintercom.com/interview-laufey/">From the Intercom, Apr 27, 2021</a> (weekly livestreams)</p>
+    <p><a href="https://www.npr.org/transcripts/nx-s1-5561773">NPR Fresh Air, Oct 8, 2025</a></p>
+    <p><a href="https://fallback.www.voguescandinavia.com/articles/laufey-waxes-lyrical">Vogue Scandinavia, Aug 10, 2023</a></p>
+    <p><a href="https://www.today.com/today/amp/rcna56020">TODAY, 2022</a> (TikTok in 2020; runs her own accounts)</p>
+    <p><a href="https://newsroom.tiktok.com/en-us/tiktok-launches-exclusive-in-app-experience-for-laufey">TikTok Newsroom, Aug 22, 2025</a></p>
+    <p>TikTok posting and follower counts: archived copies of tiktok.com/@laufey on the Wayback Machine, June 2021 to December 2024.</p>
+    <p>Instagram follower counts: archived copies of instagram.com/laufey on the Wayback Machine, September 2022 to October 2026; Vísir (<a href="https://www.visir.is/g/20232498773d/lauf-ey-tekur-fram-ur-bjork">Dec 4, 2023</a>, <a href="https://www.visir.is/g/20242611548d/haf-thor-ekki-lengur-vin-saelasti-is-lendingurinn-a-instagram">Aug 23, 2024</a>, <a href="https://www.visir.is/g/20242641280d/lauf-ey-fagnadi-med-oli-viu-rodrigo-og-chappell-roan">Oct 28, 2024</a>, <a href="https://www.visir.is/g/20252763455d/enginn-faer-ad-skipta-ser-af-ton-list-lauf-eyjar">Aug 18, 2025</a>); <a href="https://www.wmagazine.com/culture/laufey-bewitched-goddess-edition-interview">W Magazine, Apr 26, 2024</a>; <a href="https://airmail.news/issues/2025-8-16/laufey">Airmail, Aug 16, 2025</a>; <a href="https://www.marieclaire.com.tw/entertainment/news/92247">Marie Claire Taiwan, Mar 12, 2026</a>; HypeAuditor daily counts, Sep 23 to Oct 17, 2026.</p>
+    <p><a href="https://grapevine.is/music/2026/04/10/laufeys-march-2026-homecoming-was-more-than-concerts/">Reykjavík Grapevine, Apr 10, 2026</a> (TikTok followers)</p>
+    <p>Artists her size: every artist on <a href="https://kworb.net/spotify/listeners.html">kworb's Spotify monthly listeners list</a> with 18.4M–25.0M listeners on Oct 23, 2026 (218 including Laufey). Spotify, Instagram and TikTok followers, monthly listeners and TikTok video counts from each artist's Chartmetric page the same day. Peak listeners since March 2023 from kworb.</p>
+    <p>Fan Intensity inputs for the same artists, Oct 23, 2026: Last.fm listeners and plays from each artist's Last.fm page; streams by song (as lead artist) from kworb's Spotify artist pages.</p>
+    <p>Live: <a href="https://www.billboard.com/wp-content/uploads/2026/05/Midyear-Touring-2026.pdf">Billboard Boxscore midyear 2026 report</a> (shows Oct 1, 2025–Mar 31, 2026).</p>
+    <p><a href="https://musicbusinessworldwide.com/with-the-biggest-jazz-album-debut-in-spotify-history-awal-says-laufey-is-bringing-jazz-to-gen-z">Music Business Worldwide, Oct 13, 2023</a></p>
+    <p><a href="https://www.musicweek.com/labels/read/there-is-no-ceiling-to-where-she-can-go-foundations-management-awal-plot-laufey-s-next-move/091786">Music Week, May 1, 2025</a></p>
+    <p><a href="https://www.musicweek.com/labels/read/laufey-signs-first-major-deal-with-interscope-verve/095000">Music Week, Sep 16, 2026</a></p>
+    <p><a href="https://www.icelandreview.com/news/laufey-sets-new-jazz-standard-on-spotify/">Iceland Review, Sep 12, 2023</a></p>
+    <p><a href="https://ca.billboard.com/charts/billboard-200/2023-09-23">Billboard 200, week of Sep 23, 2023</a>; <a href="https://thefader.com/2023/09/18/olivia-rodrigo-guts-no-1-debut">The FADER, Sep 18, 2023</a> (<i>GUTS</i> first week)</p>
+    <p><a href="https://www.today.com/popculture/music/laufey-jazz-classical-music-gen-z-rcna56020">TODAY, 2022</a></p>
+    <p><a href="https://www.whowhatwear.com/fashion/cover-features/laufey">Who What Wear, Apr 2025</a></p>
+    <p><a href="https://www.koreaboo.com/stories/icelandic-singer-received-instagram-dm-bts-v-fans-cant-keep-calm/">Koreaboo (V and “Like the Movies”)</a></p>
+    <p><a href="http://news.pollstar.com/2025/05/29/it-was-only-a-matter-of-time-laufey-heads-to-arenas-on-new-tour/">Pollstar, May 29, 2025</a></p>
+    <p><a href="https://www.melodicmag.com/news/laufey-earns-first-top-ten-album-with-a-matter-of-time/">Melodic Mag, Sep 4, 2025</a></p>
+    <p><a href="https://music.newcity.com/2024/04/25/cool-jazz-the-laufey-phenomenon/">Newcity, Apr 25, 2024</a></p>
+    <p><a href="https://www.newsweek.com/2025/08/29/entertainment/music/laufey-anxious-cinderella-new-album-matter-time-2115354.html">Newsweek, Aug 2025</a></p>
+    <p><a href="https://kworb.net/spotify/artist/7gW0r5CkdEUMm42w9XpyZO_songs.html">kworb, Spotify streams</a></p>
+    <p><a href="https://www.recordoftheday.com/news-and-press/awal-signs-laufey-to-global-recordings-deal">Record of the Day, Apr 2022</a></p>
+    <p><a href="https://news.pollstar.com/2026/07/27/uta-signs-laufey/">Pollstar, Jul 27, 2026</a></p>
+    <p><a href="https://consequence.net/2025/05/laufey-north-american-tour-dates-fall-2025">Consequence, tour dates</a></p>
+    <p><a href="https://en.wikipedia.org/wiki/Laufey_discography">Wikipedia, Laufey discography</a> (pointer to chart and certification sources)</p>
+  </div>
+</section>
+
+<script>
+(function(){
+  const NS="http://www.w3.org/2000/svg";
+  const el=(t,a,p)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e};
+  const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+  const fmtD=d=>d.toLocaleDateString("en-US",{month:"short",year:"numeric"});
+
+  /* ---------- listener curve ---------- */
+  const W_="Archived Spotify page", CM="Chartmetric";
+  const raw=[
+    ["2020-11-08",.0458,W_],["2021-03-06",.0787,W_],["2021-11-24",.5788,W_],["2022-01-03",2.4,W_],["2022-01-13",2.0,W_],["2022-06-04",1.0,W_],
+    ["2022-10-15",2.5,W_],["2022-11-09",2.9,W_],["2022-12-07",4.4,W_],["2023-02-15",3.194,CM+" (my pull)"],["2023-03-20",3.3,W_],["2023-05-15",3.6,W_],
+    ["2023-06-09",5.9,W_],["2023-06-27",6.1,W_],["2023-07-26",7.1,W_],["2023-08-03",8.8,W_],["2023-08-09",10.3,W_],["2023-08-18",11.7,W_],
+    ["2023-09-08",12.7,W_],["2023-09-17",13.485,CM+" (my pull)"],["2023-09-30",13.3,W_],["2023-10-11",12.4,W_],["2023-10-25",11.9,W_],["2023-11-04",12.3,W_],
+    ["2023-11-30",14.9,W_],["2023-12-26",25.4,W_],["2024-01-06",25.0,W_],["2024-02-03",12.3,W_],["2024-03-02",13.3,W_],["2024-04-24",12.8,W_],
+    ["2024-05-25",14.2,W_],["2024-07-11",13.4,W_],["2024-08-23",14.1,W_],["2024-09-26",14.6,W_],["2024-11-09",15.8,W_],["2024-11-22",18.5,W_],
+    ["2024-12-03",23.9,W_],["2024-12-17",32.5,W_],["2024-12-27",43.0,"ChartMasters (passed 43M)"],["2024-12-31",42.0,W_],["2025-01-14",35.4,W_],["2025-01-23",18.5,W_],
+    ["2025-02-21",15.8,W_],["2025-04-01",13.5,W_],["2025-04-30",15.2,W_],["2025-06-15",17.0,W_],["2025-07-16",18.1,W_],["2025-08-15",19.0,W_],
+    ["2025-08-27",20.5,W_],["2025-09-24",25.0,W_],["2025-10-21",24.6,W_],["2025-11-13",25.0,W_],["2025-12-25",44.0,"ChartMasters (passed 44M)"],
+    ["2025-12-26",47.3,"kworb all-time high (ChartMasters: passed 47M)"],["2026-01-31",22.9,W_],["2026-03-13",25.2,W_],["2026-04-19",23.7,W_],
+    ["2026-05-08",25.0,W_],["2026-06-16",23.7,W_],["2026-07-14",21.7,W_],["2026-08-26",21.0,W_],["2026-09-26",21.3,W_],["2026-10-21",21.7,CM+" (my pull)"]
+  ];
+  const pts=raw.map(([d,v,src])=>({d,v,src,t:new Date(d+"T12:00:00")}));
+  function interp(t){for(let i=0;i<pts.length-1;i++){const a=pts[i],b=pts[i+1];if(t>=a.t&&t<=b.t){return a.v+(b.v-a.v)*(t-a.t)/(b.t-a.t)}}return pts[pts.length-1].v}
+  const fmtV=v=>v<1?Math.round(v*1000)+"K":(v>=10?v.toFixed(1):v.toFixed(2)).replace(/\.0+$/,"")+"M";
+  const fmtDay=t=>t.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
+
+  function drawCurve(){
+    const box=document.getElementById("curve"),tip=document.getElementById("curve-tip");
+    box.querySelectorAll("svg").forEach(s=>s.remove());
+    const W=Math.max(320,box.clientWidth-24),narrow=W<560,H=narrow?280:340;
+    const m={l:40,r:narrow?12:20,t:28,b:30};
+    const t0=new Date("2020-01-01"),t1=new Date("2026-12-31"),vmax=50;
+    const x=t=>m.l+(t-t0)/(t1-t0)*(W-m.l-m.r), y=v=>m.t+(1-v/vmax)*(H-m.t-m.b);
+    const svg=el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":"Line chart of Laufey's Spotify monthly listeners from 2020 to 2026. Under 1 million until 2022, about 3 million in late 2022, 13.5 million after Bewitched in September 2023, around 13 to 15 million through 2024 and early 2025, about 24 million from late 2025, and 21.7 million in October 2026, with December holiday spikes to about 25 million in 2023, 43 million in 2024 and an all-time high of 47.3 million in 2025. Numbered dashed lines mark the viral It Could Happen to You cover in March 2020, the release of Valentine and V of BTS sharing Like the Movies in February 2022, her debut album Everything I Know About Love in August 2022, From the Start in May 2023, Bewitched in September 2023, A Matter of Time in August 2025, and the line outside her Nashville show in October 2025."},null);
+    box.appendChild(svg);
+    const muted=css("--muted"),line=css("--line"),acc=css("--accent"),rose=css("--rose"),surf=css("--surface"),onAcc=css("--on-accent");
+    [0,10,20,30,40,50].forEach(v=>{el("line",{x1:m.l,x2:W-m.r,y1:y(v),y2:y(v),stroke:line,"stroke-width":1},svg);const tx=el("text",{x:m.l-8,y:y(v)+4,"text-anchor":"end"},svg);tx.textContent=v?v+"M":"0"});
+    for(let yr=2020;yr<=2026;yr++){const X=x(new Date(yr,0,1));const tx=el("text",{x:X,y:H-m.b+18,"text-anchor":"middle"},svg);tx.textContent=narrow?"’"+String(yr).slice(2):yr}
+    // milestones: numbered dashed lines, key under the chart. [date, top on desktop, top on phone]
+    const MS=[["2020-03-15",10,10],["2022-02-09",12,10],["2022-08-26",12,16],["2023-05-11",20,22],["2023-09-08",22,32],["2025-08-22",32,38],["2025-10-13",40,30]];
+    MS.forEach(([dd,tw,tn])=>{const X=x(new Date(dd+"T12:00:00"));el("line",{x1:X,x2:X,y1:y(narrow?tn:tw),y2:y(0),stroke:muted,"stroke-width":1,"stroke-dasharray":"3 3",opacity:.7},svg)});
+    let d="";pts.forEach((p,i)=>{d+=(i?"L":"M")+x(p.t).toFixed(1)+","+y(p.v).toFixed(1)});
+    el("path",{d:d+`L${x(pts[pts.length-1].t)},${y(0)}L${x(pts[0].t)},${y(0)}Z`,fill:acc,opacity:.09},svg);
+    const pth=el("path",{d,stroke:acc,"stroke-width":2,fill:"none","stroke-linejoin":"round","stroke-linecap":"round",class:"draw"},svg);
+    try{pth.style.setProperty("--len",pth.getTotalLength())}catch(e){}
+    // holiday peak labels
+    [["2023-12-26",25.4,"Holiday peak 25M"],["2024-12-27",43,"43M"],["2025-12-26",47.3,"47.3M all-time high"]].forEach(([dd,v,t],k)=>{
+      const X=x(new Date(dd+"T12:00:00")),Y=y(v);
+      el("circle",{cx:X,cy:Y,r:3.5,fill:acc,stroke:surf,"stroke-width":1.5},svg);
+      const tx=el("text",{x:k===2?X-8:k===0?X+7:X,y:k===0?Y+4:Y-9,"text-anchor":k===2?"end":k===0?"start":"middle",class:"lbl-data"},svg);tx.textContent=(narrow&&k===0)?"25M":t;
+    });
+    // endpoint
+    const last=pts[pts.length-1];el("circle",{cx:x(last.t),cy:y(last.v),r:4.5,fill:acc,stroke:surf,"stroke-width":2},svg);
+    const lt=el("text",{x:x(last.t),y:y(last.v)+20,"text-anchor":"end",class:"lbl-data"},svg);lt.textContent=narrow?"21.7M":"21.7M today";
+    // early note
+    if(!narrow){const en=el("text",{x:x(new Date("2020-09-01")),y:y(5)},svg);en.textContent="2020–21: 46K to 579K";}
+    // numbered badges at the top of each milestone line
+    { const ink=css("--ink"),r=narrow?6.5:8.5;
+      MS.forEach(([dd,tw,tn],i)=>{const X=x(new Date(dd+"T12:00:00")),Y=y(narrow?tn:tw);
+        el("circle",{cx:X,cy:Y,r,fill:ink,stroke:surf,"stroke-width":1.5},svg);
+        const t=el("text",{x:X,y:Y+(narrow?3:3.5),"text-anchor":"middle",style:`fill:${surf};font-size:${narrow?9:10}px;font-weight:500`},svg);t.textContent=i+1;}); }
+    // hover
+    const hit=el("rect",{x:m.l,y:m.t,width:W-m.l-m.r,height:H-m.t-m.b,fill:"transparent"},svg);
+    const cross=el("line",{y1:m.t,y2:H-m.b,stroke:muted,"stroke-width":1,opacity:0},svg);
+    const dot=el("circle",{r:4.5,fill:surf,stroke:acc,"stroke-width":2,opacity:0},svg);
+    function move(ev){const r=svg.getBoundingClientRect(),sx=(ev.clientX-r.left)*W/r.width;let best=pts[0],bd=1e9;pts.forEach(a=>{const dd=Math.abs(x(a.t)-sx);if(dd<bd){bd=dd;best=a}});
+      const X=x(best.t),Y=y(best.v);cross.setAttribute("x1",X);cross.setAttribute("x2",X);cross.setAttribute("opacity",.35);dot.setAttribute("cx",X);dot.setAttribute("cy",Y);dot.setAttribute("opacity",1);
+      tip.innerHTML=`<b>${fmtV(best.v)}</b> · ${fmtDay(best.t)}<br>${best.src}`;tip.hidden=false;const bx=box.getBoundingClientRect();
+      let lx=r.left-bx.left+X*r.width/W;lx=Math.max(100,Math.min(bx.width-100,lx));tip.style.left=lx+"px";tip.style.top=(r.top-bx.top+Y*r.height/H)+"px"}
+    hit.addEventListener("pointermove",move);hit.addEventListener("pointerdown",move);
+    hit.addEventListener("pointerleave",()=>{tip.hidden=true;cross.setAttribute("opacity",0);dot.setAttribute("opacity",0)});
+  }
+
+  /* ---------- horizontal bars helper ---------- */
+  function bars(id,rows,opt){
+    const box=document.getElementById(id),tip=document.getElementById(id+"-tip");
+    box.querySelectorAll("svg").forEach(s=>s.remove());
+    const W=Math.max(opt.minW||320,box.clientWidth-24),rowH=opt.rowH||30,lw=opt.labelW(W),m={l:lw,r:64,t:opt.ref?24:6,b:opt.axis?26:6};
+    const H=m.t+rows.length*rowH+m.b,max=opt.max;
+    const x=v=>m.l+(v/max)*(W-m.l-m.r);
+    const svg=el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":opt.aria},null);box.appendChild(svg);
+    const line=css("--line"),acc=css("--accent"),mut=css("--line"),surf=css("--surface");
+    if(opt.axis)opt.ticks.forEach(v=>{el("line",{x1:x(v),x2:x(v),y1:m.t,y2:H-m.b,stroke:line},svg);const t=el("text",{x:x(v),y:H-8,"text-anchor":"middle"},svg);t.textContent=opt.tickFmt(v)});
+    rows.forEach((r,i)=>{const Y=m.t+i*rowH,bh=rowH-12;
+      const lab=el("text",{x:lw-10,y:Y+bh/2+4+2,"text-anchor":"end",class:r.hi?"lbl-data":""},svg);lab.textContent=r.label;
+      const w=Math.max(4,x(r.v)-m.l);
+      const b=el("rect",{x:m.l,y:Y+2,width:w,height:bh,rx:0,fill:r.hi?acc:(r.mid?acc:css("--muted")),opacity:r.hi?1:(r.mid?.55:.35)},svg);
+      const vt=el("text",{x:m.l+w+6,y:Y+bh/2+6,class:r.hi?"lbl-data":""},svg);vt.textContent=r.vl;
+      const hit=el("rect",{x:0,y:Y,width:W,height:rowH,fill:"transparent"},svg);
+      const show=()=>{tip.innerHTML=r.tip;tip.hidden=false;const bx=box.getBoundingClientRect(),sr=svg.getBoundingClientRect();let lx=sr.left-bx.left+(m.l+w/2)*sr.width/W;lx=Math.max(90,Math.min(bx.width-90,lx));tip.style.left=lx+"px";tip.style.top=(sr.top-bx.top+(Y+2)*sr.height/H)+"px"};
+      hit.addEventListener("pointerenter",show);hit.addEventListener("pointerdown",show);hit.addEventListener("pointerleave",()=>tip.hidden=true);
+    });
+    if(opt.ref){const X=x(opt.ref.v);el("line",{x1:X,x2:X,y1:m.t-20,y2:H-m.b+2,stroke:css("--ink"),"stroke-width":1.5,"stroke-dasharray":"4 3"},svg);const t=el("text",{x:X+5,y:m.t-10,class:"lbl-data"},svg);t.textContent=opt.ref.label;}
+  }
+
+  function drawLift(){
+    const rows=[
+      {label:"Monthly listeners",v:1.6,vl:"1.6×",tip:"<b>Spotify monthly listeners</b><br>13.5M (Sep 2023) to 21.7M (Oct 2026)"},
+      {label:"TikTok followers",v:3.7,vl:"3.7×",hi:true,tip:"<b>TikTok followers</b><br>~3M (Oct 2023) to 11.1M (Oct 2026)"},
+      {label:"Album first week",v:4.3,vl:"4.3×",hi:true,tip:"<b>First-week US units</b><br>Bewitched 23K to A Matter of Time 99K"},
+      {label:"Headline room",v:9.9,vl:"~10×",hi:true,tip:"<b>Headline room per night</b><br>2,214 (Ace Hotel, fall 2023) to ~22,000 (MSG, Oct 2025)"}
+    ];
+    bars("lift",rows,{max:11,labelW:W=>W<420?118:140,rowH:36,axis:true,ticks:[0,2,4,6,8,10],tickFmt:v=>v+"×",
+      aria:"Bar chart of growth after the 2023 breakout: monthly listeners 1.6 times, TikTok followers 3.7 times, album first week 4.3 times, headline room about 10 times."});
+  }
+
+  function drawCohort(){
+    bars("sv-cohort",[
+      {label:"Started by 2022",v:70,vl:"70% · 16 of 23",hi:true,tip:"<b>Started by 2022</b><br>16 of 23 have seen her live<br>17 of 23 own a vinyl or CD"},
+      {label:"Started 2023",v:55,vl:"55% · 18 of 33",mid:true,tip:"<b>Started in 2023</b><br>18 of 33 have seen her live<br>14 of 33 own a vinyl or CD"},
+      {label:"Started 2024",v:50,vl:"50% · 7 of 14",mid:true,tip:"<b>Started in 2024</b><br>7 of 14 have seen her live<br>7 of 14 own a vinyl or CD"},
+      {label:"Started 2025–26",v:14,vl:"14% · 2 of 14",tip:"<b>Started in 2025–26</b><br>2 of 14 have seen her live<br>4 of 14 own a vinyl or CD"}
+    ],{max:100,labelW:W=>W<420?118:132,rowH:34,axis:true,ticks:[0,25,50,75,100],tickFmt:v=>v+"%",aria:"Bar chart: 70 percent of fans who started by 2022 have seen Laufey live, 55 percent of 2023 starters, 50 percent of 2024 starters and 14 percent of 2025–26 starters."});
+  }
+
+  function drawSurvey(){
+    bars("sv-jazz",[
+      {label:"Yes, a lot more",v:25,vl:"25 · 30%",hi:true,tip:"<b>Yes, a lot more</b><br>25 of 84 fans"},
+      {label:"Yes, a little more",v:27,vl:"27 · 32%",mid:true,tip:"<b>Yes, a little more</b><br>27 of 84 fans"},
+      {label:"Already listened",v:23,vl:"23 · 27%",tip:"<b>No, I already listened to jazz</b><br>23 of 84 fans"},
+      {label:"No",v:9,vl:"9 · 11%",tip:"<b>No</b><br>9 of 84 fans"}
+    ],{max:29,labelW:W=>W<420?118:132,rowH:34,axis:false,aria:"Bar chart: 25 fans listen to a lot more jazz because of Laufey, 27 a little more, 23 already listened to jazz, 9 no."});
+    const A=[["Chet Baker",20,1],["Ella Fitzgerald",16,1],["Miles Davis",6],["Billie Holiday",6],["Samara Joy",6],["Sarah Vaughan",5],["Stan Getz",4],["Julie London",4],["Louis Armstrong",4],["Frank Sinatra",4]];
+    bars("sv-artists",A.map(([n,v,h])=>({label:n,v,vl:String(v),hi:!!h,tip:`<b>${n}</b><br>named by ${v} of 47`})),
+      {max:22,labelW:W=>W<420?110:124,rowH:28,axis:false,aria:"Bar chart of jazz artists fans discovered through Laufey: Chet Baker 20, Ella Fitzgerald 16, Miles Davis, Billie Holiday and Samara Joy 6 each, Sarah Vaughan 5, and Stan Getz, Julie London, Louis Armstrong and Frank Sinatra 4 each."});
+  }
+
+  function drawRooms(){
+    const rows=[
+      {label:"Harpa, Reykjavík · Sep 2023",v:1600,vl:"~1,600",tip:"<b>Harpa</b>, Reykjavík<br>Two shows, sold out in minutes"},
+      {label:"Ace Hotel, LA · Fall 2023",v:2214,vl:"2,214",tip:"<b>Theatre at Ace Hotel</b><br>Sold out"},
+      {label:"Wang Theatre, Boston · May 2024",v:3500,vl:"~3,500",tip:"<b>Wang Theatre</b><br>Two nights, sold out"},
+      {label:"Royal Albert Hall · May 2024",v:5272,vl:"5,272",tip:"<b>Royal Albert Hall</b><br>Sold out"},
+      {label:"Radio City · May 2024",v:5947,vl:"5,947",tip:"<b>Radio City Music Hall</b><br>Two nights: 11,894 tickets, $635,340 gross (Pollstar)"},
+      {label:"Hollywood Bowl · Aug 2024",v:17000,vl:"~17,000",tip:"<b>Hollywood Bowl</b> with the LA Phil<br>Sold out; filmed for her concert film"},
+      {label:"Crypto.com Arena · Sep 2025",v:20000,vl:"~20,000",hi:true,tip:"<b>Crypto.com Arena</b>, LA<br>Two nights, sold out"},
+      {label:"Madison Square Garden · Oct 2025",v:22000,vl:"~22,000",hi:true,tip:"<b>Madison Square Garden</b><br>Two nights, sold out, two days after Nashville"},
+      {label:"Kórinn, Iceland · Mar 2026",v:19000,vl:"~19,000",hi:true,tip:"<b>Kórinn</b>, Kópavogur<br>Two homecoming nights"},
+      {label:"Mexico City finale · Sep 2026",v:17000,vl:"17,000+",hi:true,tip:"<b>Palacio de los Deportes</b><br>Tour finale, 17,000+ attendance"}
+    ];
+    bars("rooms",rows,{max:23000,minW:560,labelW:W=>210,rowH:30,axis:true,ticks:[0,5000,10000,15000,20000],tickFmt:v=>v?(v/1000)+"K":"0",
+      aria:"Bar chart of headline venue capacity from about 1,600 seats in 2023 to about 22,000 at Madison Square Garden in 2025."});
+  }
+
+
+  /* ---------- artists her size: strip plot ---------- */
+  const BAND=[["Gucci Mane",0.263,0.645,0.01,0.01],["Grupo Firme",0.72,0.273,0.254,0.3],["T-Pain",0.27,0.227,0.216,0.14],["U2",0.588,0.16,0.013,0.1],["beabadoobee",0.317,0.19,0.233,0.23],["Tyla",0.223,0.559,0.706,0.59],["Keane",0.178,0.02,0.006,0.02],["The Smiths",0.373,0.048,null,null],["Luke Combs",0.604,0.329,0.28,0.65],["Jay Wheeler",0.229,0.395,0.48,0.3],["KPop Demon Hunters Cast",0.107,null,null,null],["a-ha",0.138,0.015,0.0,0.0],["Luis Fonsi",0.473,0.651,0.104,0.12],["El Alfa",0.189,0.555,0.08,0.02],["DJ Khaled",0.565,1.566,0.302,0.29],["Jack Harlow",0.196,0.243,0.241,0.4],["Limp Bizkit",0.417,0.094,0.015,0.12],["Marvin Gaye",0.277,0.0,null,null],["Sebastian Yatra",1.054,1.169,0.804,0.83],["Alok",0.477,1.197,0.63,0.56],["Lola Young",0.081,0.084,0.118,0.57],["Elvis Presley",0.507,0.084,0.019,0.05],["Amy Winehouse",0.442,0.096,0.066,0.39],["Yung Beef",0.033,0.028,0.005,0.02],["George Michael",0.274,0.055,0.057,0.12],["R.E.M.",0.253,0.035,0.001,0.01],["Dolly Parton",0.162,0.428,0.328,0.97],["Train",0.201,0.022,0.018,0.16],["Shashwat Sachdev",0.067,0.056,null,null],["Brent Faiyaz",0.387,0.222,0.071,0.14],["Ray Dalton",0.008,0.003,0.007,0.06],["Bob Marley & The Wailers",0.6,0.43,0.096,0.23],["John Legend",0.381,0.661,0.13,0.36],["Amit Trivedi",0.525,0.029,null,null],["Måneskin",0.489,0.28,0.337,0.39],["Dr. Dre",0.72,0.333,0.001,0.0],["Nate Ruess",0.02,0.004,null,null],["Vishal Dadlani",0.531,0.168,null,null],["Tyga",0.34,1.942,0.484,0.18],["Javed Ali",0.609,0.03,null,null],["Glass Animals",0.213,0.032,0.036,0.09],["Sameer Anjaan",0.021,0.006,null,null],["De La Ghetto",0.365,0.361,0.069,0.03],["Gabito Ballesteros",0.339,0.198,0.164,0.29],["Carly Rae Jepsen",0.238,0.114,0.025,0.03],["TLC",0.218,0.018,0.009,0.04],["Gym Class Heroes",0.086,0.004,0.008,0.03],["Stevie Wonder",0.339,0.011,0.007,0.03],["Bryson Tiller",0.5,0.426,0.06,0.11],["Luis Miguel",1.021,0.271,0.064,0.11],["Zion",0.222,0.243,null,null],["Lenny Tavárez",0.177,0.273,0.184,0.08],["Billy Idol",0.132,0.055,0.015,0.1],["Marco Antonio Solís",0.427,0.18,0.039,0.03],["Shilpa Rao",0.228,0.078,null,null],["Muse",0.406,0.126,0.028,0.19],["The 1975",0.395,0.166,0.044,0.2],["Foo Fighters",0.629,0.265,0.023,0.31],["Martin Garrix",0.684,0.681,0.121,0.11],["Mac DeMarco",0.424,0.023,null,null],["EJAE",0.036,0.085,0.057,0.16],["Rahat Fateh Ali Khan",1.403,0.041,null,null],["Shaarib Toshi",0.149,0.006,null,null],["Juanes",0.277,0.255,0.099,0.29],["The Offspring",0.34,0.157,0.051,0.52],["Jessie J",0.572,0.626,0.111,0.16],["Sajid-Wajid",0.175,0.01,null,null],["Bastille",0.265,0.049,0.036,0.1],["Bruce Springsteen",0.365,0.109,null,null],["Conan Gray",0.613,0.38,0.426,1.67],["Anderson .Paak",0.128,0.161,0.027,0.08],["Depeche Mode",0.374,0.079,0.007,0.07],["Jubin Nautiyal",1.025,0.583,0.074,0.02],["Amaal Mallik",0.455,0.273,null,null],["Sech",0.566,0.305,0.193,0.07],["Laufey",0.515,0.443,0.514,2.42],["REI AMI",0.02,0.043,0.064,0.13],["Justin Quiles",0.25,0.38,0.173,0.06],["Anu Malik",0.317,0.013,null,null],["JVKE",0.316,0.171,0.619,0.91],["Troye Sivan",0.455,0.711,0.178,0.24],["Kapo",0.081,0.087,0.165,0.15],["Disclosure",0.118,0.049,0.014,0.06],["Mazzy Star",0.106,0.001,null,null],["Rels B",0.5,0.246,0.114,0.42],["De La Soul",0.064,0.021,0.019,0.15],["The Fray",0.214,0.012,0.015,0.08],["Big Sean",0.558,0.79,0.06,0.05],["Scorpions",0.456,0.114,0.034,0.07],["Weezer",0.27,0.073,0.092,0.29],["Mitski",0.57,0.125,0.112,0.14],["Lost Frequencies",0.153,0.068,0.033,0.17],["Reik",0.49,0.123,0.103,0.11],["Imogen Heap",0.067,0.021,0.03,0.13],["girl in red",0.471,0.153,0.151,0.31],["Camilo",0.991,1.319,1.477,0.62],["Central Cee",0.568,0.844,0.947,1.55],["HUNTR/X",0.301,null,null,null],["Meghan Trainor",0.753,0.823,0.872,0.3],["Migos",0.741,0.581,0.059,0.08],["Clairo",0.362,0.286,0.086,0.13],["Young Miko",0.257,0.396,0.534,1.17],["Foreigner",0.211,0.008,0.003,0.02],["Rex Orange County",0.351,0.086,0.056,0.09],["Céline Dion",0.561,0.578,0.321,0.13],["Alessia Cara",0.609,0.219,0.037,0.04],["Yo Yo Honey Singh",2.217,1.044,0.337,0.21],["Zedd",0.308,0.386,0.061,0.11],["Three Days Grace",0.405,0.072,0.044,0.56],["Led Zeppelin",0.829,0.088,0.026,0.39],["Bonnie Tyler",0.14,0.018,0.027,0.07],["Aitana",0.201,0.236,0.17,0.4],["AUDREY NUNA",0.033,0.047,0.042,0.12],["Banda MS de Sergio Lizárraga",1.002,0.208,0.238,0.26],["Mary J. Blige",0.244,0.342,0.058,0.09],["Luis R Conriquez",0.529,0.228,0.328,0.26],["Mike Posner",0.087,0.073,0.06,0.19],["Skrillex",0.377,0.588,0.05,0.13],["De La Rose",0.15,0.087,0.174,0.2],["Sachet-Parampara",0.193,0.156,null,null],["Wisin",0.53,0.706,0.138,0.08],["Anuv Jain",0.654,0.193,0.001,0.01],["Jeremih",0.389,0.119,0.019,0.01],["Julión Álvarez y su Norteño Banda",0.676,0.213,0.225,0.15],["Tulus",1.127,0.118,0.015,0.03],["David Bowie",0.634,0.153,0.04,0.32],["5 Seconds of Summer",0.523,0.544,0.116,0.69],["Neeti Mohan",0.386,0.179,null,null],["Mc Gw",0.083,0.075,0.034,0.01],["Grand Theft Auto VI",0.005,null,null,null],["Jonas Blue",0.196,0.026,0.031,0.14],["Calle 24",0.221,0.054,0.059,0.12],["Lynyrd Skynyrd",0.324,0.022,0.0,0.0],["KISS",0.617,0.139,0.07,0.9],["Alejandro Sanz",0.466,0.407,0.077,0.21],["Chase Atlantic",0.602,0.177,0.116,0.49],["Offset",0.334,1.131,0.132,0.12],["AURORA",0.27,0.246,0.307,0.51],["Disturbed",0.412,0.132,0.108,0.14],["MGMT",0.199,0.028,0.005,0.02],["Raim Laode",0.319,0.153,0.22,0.28],["blink-182",0.512,0.174,0.049,0.53],["Frank Sinatra",0.468,0.075,0.053,0.11],["BigXthaPlug",0.141,0.105,0.077,0.5],["Lil Peep",0.912,0.412,0.123,0.18],["Jeet Gannguli",0.148,0.025,null,null],["FloyyMenor",0.131,0.036,0.039,0.03],["Sachet Tandon",0.447,0.221,0.0,0.0],["Sam Fender",0.076,0.078,0.055,0.65],["Christian Nodal",0.856,0.528,0.129,0.21],["Marc Anthony",0.595,0.716,0.134,0.13],["T.I.",0.284,0.734,0.05,0.05],["Summer Walker",0.455,0.327,0.144,0.17],["A Boogie Wit da Hoodie",0.493,0.329,0.139,0.12],["Rae Sremmurd",0.423,0.533,0.028,0.03],["Tulsi Kumar",0.841,0.363,null,null],["Jowell & Randy",0.243,0.084,0.006,0.01],["Lenny Kravitz",0.204,0.327,0.061,0.44],["Xavi",0.476,0.19,0.417,0.55],["Julieta Venegas",0.212,0.066,0.011,0.02],["Mon Laferte",0.73,0.333,0.265,0.66],["S. P. Balasubrahmanyam",1.383,0.012,null,null],["Harris Jayaraj",0.621,0.032,0.0,0.0],["Stephen Sanchez",0.107,0.074,0.119,0.32],["Deftones",0.491,0.243,0.036,0.12],["Grupo Marca Registrada",0.37,0.113,0.067,0.1],["MC Meno K",0.096,0.155,0.002,0.0],["MC Ryan SP",0.461,0.799,null,null],["Chino Pacas",0.387,0.062,0.139,0.2],["Christina Perri",0.238,0.067,0.021,0.01],["Ayra Starr",0.416,0.391,0.551,0.27],["Kylie Minogue",0.131,0.188,0.037,0.16],["ILLIT",0.439,0.427,0.707,1.34],["Noriel",0.512,0.349,0.032,0.02],["Daya",0.108,0.024,0.034,0.03],["Lil Nas X",0.652,0.51,1.452,1.09],["Bob Sinclar",0.045,0.088,0.044,0.25],["Annie Lennox",0.103,0.066,0.001,0.01],["The Outfield",0.049,null,null,null],["Lauv",0.38,0.099,0.083,0.22],["Gotye",0.133,0.012,null,null],["Roddy Ricch",0.671,0.337,0.278,0.2],["Calum Scott",0.34,0.097,0.103,0.33],["Black Sabbath",0.579,0.286,null,null],["Joan Sebastian",0.83,0.043,0.005,0.0],["Ajay-Atul",0.308,0.023,null,null],["Brytiago",0.442,0.29,0.061,0.06],["Jason Mraz",0.391,0.078,0.039,0.2],["Dido",0.132,0.027,0.002,0.01],["Bill Withers",0.119,0.004,null,null],["Bryant Myers",0.826,0.434,0.016,0.01],["Eladio Carrion",0.523,0.355,0.065,0.13],["Lykke Li",0.112,0.024,0.002,0.01],["Destiny's Child",0.475,0.032,0.002,0.01],["Labrinth",0.215,0.073,0.084,0.07],["Topic",0.02,0.013,0.014,0.08],["YoungBoy Never Broke Again",0.95,0.641,0.205,0.17],["Mora",0.506,0.195,0.034,0.04],["My Chemical Romance",0.609,0.148,null,null],["Stromae",0.23,0.129,0.078,0.13],["Sixpence None The Richer",0.048,null,null,null],["Los Ángeles Azules",0.504,0.038,0.001,0.0],["LE SSERAFIM",0.619,0.597,0.884,3.09],["BLACKPINK",3.259,3.064,2.794,1.23],["Palak Muchhal",0.797,0.39,null,null],["Fetty Wap",0.301,0.484,0.13,0.1],["SOLTO (FR)",0.001,0.003,0.001,0.0],["Jasmine Sandlas",0.263,0.564,null,null],["Lenin Ramírez",0.204,0.104,0.0,0.0],["Jasleen Royal",0.219,0.145,0.0,0.0],["Lata Mangeshkar",1.642,0.055,0.0,0.0],["Kunaal Vermaa",0.099,0.043,null,null],["Jhené Aiko",0.566,0.895,0.184,0.16],["Paulo Londra",1.53,0.736,0.516,0.77],["Lil Durk",0.595,0.804,0.189,0.22],["Pearl Jam",0.586,0.212,0.024,0.34],["Faheem Abdullah",0.065,0.021,null,null],["Shania Twain",0.197,0.167,0.164,0.18]];
+  function drawBand(){
+    const box=document.getElementById("band"),tip=document.getElementById("band-tip");
+    box.querySelectorAll("svg").forEach(s=>s.remove());
+    const W=Math.max(320,box.clientWidth-24),narrow=W<520,lw=narrow?70:92,rowH=narrow?74:82,m={l:lw,r:14,t:16,b:26};
+    const H=m.t+3*rowH+m.b;
+    const CAP=150,OZ=narrow?36:48,PW=W-m.l-m.r-OZ;
+    const x=v=>v<=CAP?m.l+v/CAP*PW:m.l+PW+OZ*0.62;
+    const svg=el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":"Strip chart of followers per 100 monthly listeners for 217 artists with 18.4 to 25 million Spotify listeners. Spotify: Laufey 51.5, median 36.5. Instagram: Laufey 44.3, median 15.7. TikTok: Laufey 51.4, median 6.1."},null);box.appendChild(svg);
+    const line=css("--line"),mut=css("--muted"),ink=css("--ink"),rose=css("--rose"),surf=css("--surface");
+    (narrow?[0,50,100,150]:[0,25,50,75,100,125,150]).forEach(v=>{el("line",{x1:x(v),x2:x(v),y1:m.t,y2:H-m.b,stroke:line},svg);if(v<150){const t=el("text",{x:x(v),y:H-8,"text-anchor":"middle"},svg);t.textContent=v}});
+    { const ox=m.l+PW+OZ*0.22;el("line",{x1:ox,x2:ox,y1:m.t,y2:H-m.b,stroke:line,"stroke-dasharray":"2 3"},svg);
+      const t=el("text",{x:m.l+PW+OZ*0.62,y:H-8,"text-anchor":"middle"},svg);t.textContent="150+";const t2=el("text",{x:x(150),y:H-8,"text-anchor":"end"},svg);t2.textContent=narrow?"":"150"; }
+    const names=["Spotify","Instagram","TikTok"],meds=[36.5,15.7,6.1],dots=[];
+    names.forEach((nm,k)=>{
+      const Y0=m.t+k*rowH,cy=Y0+rowH/2;
+      const lab=el("text",{x:lw-10,y:cy+4,"text-anchor":"end",class:"lbl-data"},svg);lab.textContent=nm;
+      if(k)el("line",{x1:m.l,x2:W-m.r,y1:Y0,y2:Y0,stroke:line,"stroke-dasharray":"2 3"},svg);
+      let L=null;
+      BAND.forEach((r,i)=>{const v=r[k+1];if(v==null)return;const val=v*100;
+        if(r[0]==="Laufey"){L={val,X:x(val)};return}
+        const j=((i*37)%23)/22-0.5,Y=cy+j*(rowH-30);
+        el("circle",{cx:x(val),cy:Y,r:3,fill:mut,opacity:.42},svg);dots.push({k,name:r[0],val,X:x(val),Y});});
+      const MX=x(meds[k]);el("line",{x1:MX,x2:MX,y1:Y0+8,y2:Y0+rowH-8,stroke:ink,"stroke-width":2},svg);
+      const mt=el("text",{x:MX,y:Y0+6,"text-anchor":"middle"},svg);mt.textContent=(k===0&&!narrow?"median ":"")+meds[k];
+      el("circle",{cx:L.X,cy:cy,r:6.5,fill:rose,stroke:surf,"stroke-width":2},svg);
+      const lt=el("text",{x:L.X+10,y:cy+4,class:"lbl-data",style:`font-weight:600;paint-order:stroke;stroke:${surf};stroke-width:4px;stroke-linejoin:round`},svg);lt.textContent=(narrow?"":"Laufey ")+L.val.toFixed(1);
+      dots.push({k,name:"Laufey",val:L.val,X:L.X,Y:cy,me:true});
+    });
+    const fmt=v=>v<1?v.toFixed(2):v<10?v.toFixed(1):Math.round(v);
+    function move(ev){const r=svg.getBoundingClientRect(),sx=(ev.clientX-r.left)*W/r.width,sy=(ev.clientY-r.top)*H/r.height;
+      const k=Math.max(0,Math.min(2,Math.floor((sy-m.t)/rowH)));let best=null,bd=1e9;
+      dots.forEach(d=>{if(d.k!==k)return;const dd=Math.hypot(d.X-sx,(d.Y-sy)*.6);if(dd<bd){bd=dd;best=d}});
+      if(!best||bd>28){tip.hidden=true;return}
+      tip.innerHTML=`<b>${best.name}</b><br>${fmt(best.val)} ${names[k]} followers per 100 listeners`;tip.hidden=false;
+      const bx=box.getBoundingClientRect();let lx=r.left-bx.left+best.X*r.width/W;lx=Math.max(110,Math.min(bx.width-110,lx));
+      tip.style.left=lx+"px";tip.style.top=(r.top-bx.top+best.Y*r.height/H-6)+"px"}
+    svg.addEventListener("pointermove",move);svg.addEventListener("pointerdown",move);svg.addEventListener("pointerleave",()=>tip.hidden=true);
+  }
+
+  function drawFii(){
+    const T=[["YoungBoy Never Broke Again", 97.4, [94, 98, 100]], ["BLACKPINK", 97.2, [100, 99, 93]], ["LE SSERAFIM", 90.3, [95, 100, 76]], ["Lil Peep", 89.8, [88, 99, 82]], ["Lil Durk", 88.6, [92, 85, 89]], ["Eladio Carrion", 85.8, [70, 91, 97]], ["Luis Miguel", 85.2, [84, 73, 98]], ["Luke Combs", 85.0, [80, 81, 94]], ["Jhené Aiko", 84.7, [93, 79, 82]], ["Laufey", 84.5, [90, 95, 69]], ["Yo Yo Honey Singh", 83.6, [99, 57, 95]], ["Banda MS de Sergio Lizárraga", 81.8, [89, 59, 97]], ["Rels B", 81.2, [65, 87, 92]], ["Deftones", 81.1, [59, 98, 87]], ["Troye Sivan", 80.9, [84, 89, 70]], ["Brent Faiyaz", 79.9, [52, 95, 93]], ["Summer Walker", 79.6, [69, 86, 83]], ["Bryant Myers", 79.5, [82, 66, 90]], ["David Bowie", 79.1, [64, 90, 84]], ["Central Cee", 79.1, [96, 74, 68]]];
+    bars("fii",T.map(([n,v,p],i)=>({label:(i+1)+". "+n,v,vl:v.toFixed(1),hi:n==="Laufey",tip:`<b>${n}</b> · ${v.toFixed(1)}<br>Follow ${p[0]} · Depth ${p[1]} · Breadth ${p[2]}`})),
+      {max:100,labelW:W=>W<420?168:200,rowH:26,axis:true,ticks:[0,25,50,75,100],tickFmt:v=>v,ref:{v:53.9,label:"median 53.9"},
+       aria:"Bar chart of the top 20 Fan Intensity scores among 213 artists with 18.4 to 25 million Spotify listeners. YoungBoy Never Broke Again leads at 97.4; Laufey is 10th at 84.5. The median artist scores 53.9."});
+  }
+
+  function drawPosting(){
+    bars("posting",[
+      {label:"Mar 2020 – Jun 2021",v:.57,vl:"0.6/day · 320K",tip:"<b>Mar 19, 2020 – Jun 7, 2021</b><br>254 videos in 445 days<br>320K followers at the end"},
+      {label:"Jun 2021 – Apr 2022",v:.46,vl:"0.5/day · 360K",tip:"<b>Jun 7, 2021 – Apr 21, 2022</b><br>146 videos in 318 days<br>320K to 360K followers"},
+      {label:"Apr – Nov 2022",v:1.59,vl:"1.6/day · 694K",hi:true,tip:"<b>Apr 21 – Nov 9, 2022</b><br>321 videos in 202 days<br>360K to 694K followers"},
+      {label:"Nov 2022 – Mar 2023",v:1.07,vl:"1.1/day · 952K",hi:true,tip:"<b>Nov 9, 2022 – Mar 24, 2023</b><br>145 videos in 135 days<br>694K to 952K followers"},
+      {label:"Mar – Oct 2023",v:1.66,vl:"1.7/day · 3.1M",hi:true,tip:"<b>Mar 24 – Oct 20, 2023</b> (“From the Start”, <i>Bewitched</i>)<br>348 videos in 210 days<br>952K to 3.1M followers"},
+      {label:"Oct 2023 – Jul 2024",v:.91,vl:"0.9/day · 5.8M",tip:"<b>Oct 20, 2023 – Jul 15, 2024</b><br>246 videos in 269 days<br>3.1M to 5.8M followers"},
+      {label:"Jul – Dec 2024",v:.52,vl:"0.5/day · 7.3M",tip:"<b>Jul 15 – Dec 23, 2024</b><br>84 videos in 161 days<br>5.8M to 7.3M followers"}
+    ],{max:2,labelW:W=>W<420?132:150,rowH:32,axis:true,ticks:[0,.5,1,1.5,2],tickFmt:v=>v,
+      aria:"Bar chart of TikToks posted per day by period: 0.6 per day from March 2020 to June 2021, 0.5 to April 2022, 1.6 from April to November 2022, 1.1 to March 2023, 1.7 from March to October 2023, 0.9 to July 2024 and 0.5 to December 2024. Followers grew from 320,000 to 7.3 million."});
+  }
+
+  function drawSocial(){
+    const box=document.getElementById("social"),tip=document.getElementById("social-tip");
+    box.querySelectorAll("svg").forEach(s=>s.remove());
+    const W=Math.max(300,box.clientWidth-24),narrow=W<520,H=narrow?250:290;
+    const m={l:40,r:narrow?48:96,t:14,b:30};
+    const t0=new Date("2020-01-01"),t1=new Date("2026-12-31"),vmax=12;
+    const x=t=>m.l+(t-t0)/(t1-t0)*(W-m.l-m.r), y=v=>m.t+(1-v/vmax)*(H-m.t-m.b);
+    const svg=el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":"Line chart of Laufey's TikTok and Instagram followers, 2020 to 2026. TikTok grew from about 20,000 in May 2020 to 951,000 in March 2023, 3.1 million in October 2023 and 11.1 million in October 2026. Instagram grew from about 10,000 in March 2020 to 842,000 in June 2023, about 2 million in January 2024, about 5 million in October 2024 and 9.6 million in October 2026."},null);
+    box.appendChild(svg);
+    const line=css("--line"),surf=css("--surface");
+    [0,3,6,9,12].forEach(v=>{el("line",{x1:m.l,x2:W-m.r,y1:y(v),y2:y(v),stroke:line,"stroke-width":1},svg);const t=el("text",{x:m.l-8,y:y(v)+4,"text-anchor":"end"},svg);t.textContent=v?v+"M":"0"});
+    for(let yr=2020;yr<=2026;yr++){const t=el("text",{x:x(new Date(yr,0,1)),y:H-m.b+18,"text-anchor":"middle"},svg);t.textContent=narrow?"’"+String(yr).slice(2):yr}
+    const A="Archived TikTok profile",B="Archived Instagram profile";
+    const S=[
+      {name:"TikTok",col:css("--accent"),pts:[["2020-05-24",.02,"Her TikTok post captioned “thank you for 20k”"],["2021-06-07",.32,A],["2022-01-13",.3465,A],["2022-04-21",.3603,A],["2022-11-09",.6937,A],["2023-03-24",.9515,A],["2023-08-11",2.4,A],["2023-10-20",3.1,A],["2024-01-25",3.7,A],["2024-07-15",5.8,A],["2024-12-23",7.3,A],["2025-05-01",8.1,"Music Week (single source)"],["2025-08-22",8.8,"TikTok Newsroom (single source)"],["2026-04-10",9.8,"Reykjavík Grapevine (single source)"],["2026-10-21",11.1,"Chartmetric (my pull)"]]},
+      {name:"Instagram",col:css("--series2"),pts:[["2020-03-20",.01,"Her own estimate (Who What Wear; WBEZ/NPR)"],["2022-09-24",.367,B],["2023-06-11",.842,B],["2023-12-04",2.0,"Vísir, “just over two million” (single source)"],["2024-01-23",2.0,B+", shown as 2M"],["2024-04-26",3.0,"W Magazine, “more than three million” (single source)"],["2024-08-23",4.4,"Vísir, “just over 4.4 million” (single source)"],["2024-10-28",5.0,"Vísir, “around five million” (single source)"],["2025-08-18",6.9,"Vísir, “nearly 7 million”; Airmail (Aug 16) says “more than six million”"],["2026-01-28",8.0,B+", shown as 8M"],["2026-03-12",8.0,"Marie Claire Taiwan, “over 8 million” (single source)"],["2026-10-16",9.6,B+"; Chartmetric 9.6M"]]}
+    ];
+    const fmt=v=>v<1?Math.round(v*1000)+"K":v.toFixed(1)+"M";
+    const all=[];
+    S.forEach(s=>{
+      const P=s.pts.map(([d,v,src])=>({d,v,src,s,t:new Date(d+"T12:00:00")}));
+      for(let i=1;i<P.length;i++){const a=P[i-1],b=P[i],att={x1:x(a.t),y1:y(a.v),x2:x(b.t),y2:y(b.v),stroke:s.col,"stroke-width":2,"stroke-linecap":"round"};
+        if((b.t-a.t)/864e5>=300)att["stroke-dasharray"]="3 5";el("line",att,svg)}
+      P.forEach(p=>{el("circle",{cx:x(p.t),cy:y(p.v),r:3.5,fill:s.col,stroke:surf,"stroke-width":1.5},svg);all.push(p)});
+      const L=P[P.length-1],t=el("text",{x:x(L.t)+8,y:y(L.v)+4,class:"lbl-data"},svg);t.textContent=(narrow?"":s.name+" ")+fmt(L.v);
+    });
+    const ring=el("circle",{r:6,fill:"none","stroke-width":2,opacity:0},svg);
+    function move(ev){const r=svg.getBoundingClientRect(),sx=(ev.clientX-r.left)*W/r.width,sy=(ev.clientY-r.top)*H/r.height;
+      let best=null,bd=1e9;all.forEach(p=>{const d=Math.hypot(x(p.t)-sx,y(p.v)-sy);if(d<bd){bd=d;best=p}});
+      if(!best||bd>32){tip.hidden=true;ring.setAttribute("opacity",0);return}
+      ring.setAttribute("cx",x(best.t));ring.setAttribute("cy",y(best.v));ring.setAttribute("stroke",best.s.col);ring.setAttribute("opacity",1);
+      tip.innerHTML=`<b>${best.s.name} · ${fmt(best.v)}</b><br>${best.t.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}<br>${best.src}`;tip.hidden=false;
+      const bx=box.getBoundingClientRect();let lx=r.left-bx.left+x(best.t)*r.width/W;lx=Math.max(110,Math.min(bx.width-110,lx));
+      tip.style.left=lx+"px";tip.style.top=(r.top-bx.top+y(best.v)*r.height/H-4)+"px"}
+    svg.addEventListener("pointermove",move);svg.addEventListener("pointerdown",move);svg.addEventListener("pointerleave",()=>{tip.hidden=true;ring.setAttribute("opacity",0)});
+  }
+
+  const drawAll=()=>{drawSocial();drawCurve();drawLift();drawRooms();drawSurvey();drawCohort();drawBand();drawFii();drawPosting()};
+  drawAll();
+  let rt;window.addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(drawAll,150)});
+  if(window.matchMedia)matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change",drawAll);
+  new MutationObserver(drawAll).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+})();
+</script>
+</body>
+</html>

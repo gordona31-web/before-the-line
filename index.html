@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Before the Line: breakout files by Gordon Anderson. Each record is a case study of how an artist broke, from the first fans to the line outside the arena.">
+<meta property="og:title" content="Before the Line">
+<meta property="og:description" content="Breakout files by Gordon Anderson. Each record is one artist's breakout, from the first fans to the line outside the arena.">
+<meta property="og:type" content="website">
+<title>Before the Line</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&display=swap">
+<style>
+/* Layout: a warm, lamp-lit record shop. Chestnut wood paneling, a cream shop sign lettered in brown,
+   white paper tags, records standing on a dark wood shelf. Palette kept to brown, cream and white;
+   the only other color comes from the records themselves.
+   One typeface (Archivo) at two widths. Single committed look, colors set explicitly. */
+:root{
+  --wood:#7A4C30; --wood-2:#86563A; --wood-3:#6E432A; --wood-4:#80513A; --seam:rgba(40,20,8,.32);
+  --shelf:#3A2315; --shelf-top:#9A6A45;
+  --cream:#F4E9D6; --cream-2:#EADBC2; --white:#FFFDF9;
+  --brown:#4A2E1D; --brown-2:#6B4A33; --tan:#B08A62;
+  --font:"Archivo","Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;color:var(--cream);font-family:var(--font);font-size:1.0625rem;line-height:1.6;background-color:var(--wood);
+  background-image:
+    radial-gradient(ellipse 80% 40% at 50% 0%,rgba(255,226,180,.22),transparent 72%),
+    repeating-linear-gradient(90deg,var(--seam) 0 2px,transparent 2px 180px),
+    repeating-linear-gradient(90deg,rgba(255,230,200,.04) 0 1px,transparent 1px 5px,rgba(40,20,8,.05) 5px 6px,transparent 6px 11px),
+    repeating-linear-gradient(90deg,var(--wood) 0 180px,var(--wood-2) 180px 360px,var(--wood-3) 360px 540px,var(--wood-4) 540px 720px);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:3rem 4rem}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{text-wrap:balance}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--white);outline-offset:4px}
+.wrap{max-width:68rem;margin-inline:auto;display:grid;gap:3.25rem}
+
+/* cream shop sign, hung from two cords */
+.sign{position:relative;justify-self:start;max-width:44rem;background:var(--cream);color:var(--brown);
+  padding:1.8rem clamp(1.2rem,4vw,2.5rem) 1.6rem;border-radius:4px;display:grid;gap:.8rem;
+  box-shadow:inset 0 0 0 6px var(--cream),inset 0 0 0 8px var(--tan),0 20px 34px -20px rgba(30,15,5,.85)}
+.sign::before,.sign::after{content:"";position:absolute;top:-3rem;width:2px;height:3rem;background:rgba(30,15,5,.7)}
+.sign::before{left:16%} .sign::after{right:16%}
+.sign .kicker{font-size:.82rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--brown-2)}
+.sign h1{font-stretch:62%;font-weight:900;font-size:clamp(3.2rem,11vw,6.4rem);line-height:.86;color:var(--brown)}
+.sign .rule{height:2px;width:min(18rem,60%);background:var(--tan)}
+.sign .lede{font-size:1.12rem;line-height:1.5;max-width:31em;color:var(--brown)}
+.sign .by{font-size:.95rem;font-weight:800;color:var(--brown-2)}
+.open{position:absolute;top:-1.1rem;right:.75rem;background:var(--white);color:var(--brown);font-weight:900;font-stretch:78%;font-size:1rem;line-height:1;
+  width:5rem;aspect-ratio:1;border-radius:50%;display:grid;place-content:center;text-align:center;transform:rotate(12deg);
+  box-shadow:inset 0 0 0 2px var(--brown),0 8px 12px -8px rgba(30,15,5,.7)}
+.open small{display:block;font-stretch:100%;font-weight:700;font-size:.62rem;margin-top:.2rem}
+
+/* the shelf */
+.bin{display:grid;gap:1rem}
+.tagrow{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem}
+.papertag{display:inline-block;position:relative;background:var(--white);color:var(--brown);font-weight:900;font-stretch:72%;
+  font-size:clamp(1.5rem,3.6vw,2rem);line-height:1;padding:.55rem 1.05rem .6rem;transform:rotate(-1deg);box-shadow:0 10px 14px -10px rgba(30,15,5,.75)}
+.papertag::before{content:"";position:absolute;top:-.55rem;left:50%;width:3.2rem;height:1rem;transform:translateX(-50%) rotate(3deg);background:rgba(244,233,214,.75)}
+.tagrow p{font-size:.95rem;color:var(--cream-2)}
+.shelf{padding:2rem clamp(.5rem,2vw,1.25rem) 0}
+.records{list-style:none;margin:0;padding:0 0 1.25rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,15rem),1fr));gap:2.25rem 2.5rem;align-items:start}
+.plank{height:22px;margin-inline:calc(-1 * clamp(.5rem,2vw,1.25rem));
+  background:repeating-linear-gradient(90deg,rgba(255,230,200,.06) 0 1px,transparent 1px 8px),linear-gradient(var(--shelf-top),#5A3823 35%,var(--shelf));
+  box-shadow:0 18px 24px -10px rgba(20,10,4,.85)}
+
+/* one album */
+.album{display:grid;gap:.9rem}
+.album>a,.album>.shut{display:block;text-decoration:none;color:inherit}
+.cover-wrap{position:relative;padding-right:14%}
+.disc{position:absolute;top:6%;right:0;width:88%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,#0b0b0d 0 2.3%,var(--label,var(--cream)) 2.5% 17%,#2b2b30 17.3% 18%,transparent 18.2%),
+    repeating-radial-gradient(circle,#131316 0 1.4px,#222228 1.4px 2.8px);
+  box-shadow:inset 0 0 0 6px #0b0b0d;transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+.cover{position:relative;aspect-ratio:1/1;max-width:100%;background:var(--cream-2);overflow:hidden;
+  box-shadow:0 20px 28px -16px rgba(20,10,4,.9);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.cover img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+.cover .band{position:absolute;left:0;right:0;bottom:0;background:#1B3FCF;padding:.7rem .85rem .75rem;display:grid;gap:.15rem}
+.cover .band .t1{font-stretch:64%;font-weight:900;font-size:clamp(1.55rem,3.4vw,2rem);line-height:.9;color:#F5A9C2}
+.cover .band .t2{font-size:.68rem;font-weight:700;line-height:1.25;color:#fff}
+.cover .tag{position:absolute;top:.6rem;left:.6rem;background:var(--white);color:var(--brown);font-size:.68rem;font-weight:800;padding:.2rem .45rem}
+.price{position:absolute;top:-.9rem;right:8%;z-index:2;width:4.2rem;aspect-ratio:1;border-radius:50%;background:var(--white);color:var(--brown);
+  font-weight:900;font-stretch:80%;font-size:.8rem;line-height:1.05;display:grid;place-content:center;text-align:center;transform:rotate(12deg);
+  box-shadow:inset 0 0 0 2px var(--brown),0 6px 10px -6px rgba(20,10,4,.8)}
+.album>a:hover .cover,.album>a:focus-visible .cover{transform:translateY(-10px) rotate(-1.5deg)}
+.album>a:hover .disc,.album>a:focus-visible .disc{transform:translateX(12%) rotate(40deg)}
+.album>a:focus-visible{outline:none}
+.album>a:focus-visible .cover{outline:3px solid var(--white);outline-offset:4px}
+.meta{display:grid;gap:.2rem}
+.meta .who{font-weight:900;font-stretch:80%;font-size:1.3rem;line-height:1.1;color:var(--white)}
+.meta .what{font-size:.9rem;color:var(--cream-2);line-height:1.4}
+.meta .go{justify-self:start;font-size:.85rem;font-weight:800;color:var(--brown);background:var(--cream);padding:.2rem .6rem;margin-top:.35rem;text-decoration:none}
+.meta .go:hover{background:var(--white)}
+.credit{font-size:.72rem;color:var(--cream-2);opacity:.85;line-height:1.35}
+
+/* coming soon: plain cream sleeves with a stamped label */
+.album.soon .cover{display:grid;place-content:center;text-align:center;gap:.35rem;
+  background:linear-gradient(160deg,var(--cream),var(--cream-2))}
+.album.soon .stamp{justify-self:center;color:var(--brown);font-weight:900;font-stretch:66%;font-size:clamp(1.6rem,3.4vw,2.1rem);line-height:1;
+  padding:.45rem .9rem .5rem;border:2px solid var(--brown);transform:rotate(-3deg)}
+.album.soon .stamp-sub{font-size:.8rem;font-weight:700;color:var(--brown-2)}
+.album.soon .meta{opacity:.85}
+
+/* shelf-talker cards */
+.notes{background:var(--cream);color:var(--brown);padding:1.6rem clamp(1.1rem,4vw,2.5rem) 1.8rem;display:grid;gap:1.25rem;
+  box-shadow:0 20px 34px -20px rgba(20,10,4,.85)}
+.notes h2{font-stretch:70%;font-weight:900;font-size:clamp(1.6rem,3.6vw,2.1rem);line-height:1}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:1.25rem 1.5rem}
+.card{background:var(--white);padding:1.05rem 1.15rem 1.15rem;display:grid;gap:.45rem;align-content:start;min-width:0;border-top:3px solid var(--brown)}
+.card b{font-size:1rem;font-weight:900}
+.card p{font-size:1rem;color:var(--brown)}
+.card small{font-size:.85rem;color:var(--brown-2);line-height:1.45}
+.foot{color:var(--cream-2);font-size:.85rem}
+
+@media (max-width:560px){.sign .kicker{padding-right:4.75rem}.open{width:4.3rem;font-size:.9rem}}
+@media (prefers-reduced-motion:reduce){.cover,.disc{transition:none}}
+</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)} img{max-width:100%} [hidden]{display:none!important}</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="sign">
+    <div class="open">Open<small>Oct 2026</small></div>
+    <p class="kicker">Breakout files · Record shop</p>
+    <h1>Before the Line</h1>
+    <div class="rule" aria-hidden="true"></div>
+    <p class="lede">Each record on the shelf is one artist's breakout, from the first fans to the line outside the arena. Pick one to read the story.</p>
+    <p class="by">By Gordon Anderson</p>
+  </header>
+
+  <section class="bin" aria-labelledby="shelf-title">
+    <div class="tagrow">
+      <h2 class="papertag" id="shelf-title">New arrivals</h2>
+      <p>Pick a record off the shelf to open its file.</p>
+    </div>
+    <div class="shelf">
+      <ul class="records" id="records"></ul>
+      <div class="plank" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section class="notes" aria-labelledby="notes-title">
+    <h2 id="notes-title">How to read a file</h2>
+    <div class="cards">
+      <div class="card"><b>Side A · The story</b><p>How the artist broke, step by step, and why each step worked.</p><small>Personal story, timeline, posting data, the fan funnel.</small></div>
+      <div class="card"><b>Side B · The numbers</b><p>How the artist compares with others the same size, and what fans actually do.</p><small>Peer comparisons, a fan intensity score, an original fan survey.</small></div>
+      <div class="card"><b>Staff picks</b><p>What the breakout teaches about scouting the next artist early.</p><small>Every file ends with lessons for spotting the next one.</small></div>
+    </div>
+  </section>
+
+  <p class="foot">Data in each file comes from Chartmetric, kworb, archived profiles and press, with sources listed at the end of every record.</p>
+</div>
+
+<script>
+// One entry per breakout file. To add an artist: add an object here and publish their page and cover photo next to this one.
+const RECORDS = [
+  { file:"01", artist:"Laufey", genre:"Jazz-pop", years:"2020 to 2026", href:"laufey.html",
+    img:"laufey-cover.jpg", imgAlt:"Portrait of Laufey in a navy sleeveless top against a warm cream wall", credit:'Photo: Foundations Management, <a href="https://commons.wikimedia.org/wiki/File:Laufey_Lin.jpg">CC BY-SA 3.0</a>, via Wikimedia Commons',
+    t1:"From the Start", t2:"How Laufey Used Social Media to Build a Fanbase and Bring Gen Z to Jazz",
+    blurb:"Lockdown covers, a TikTok a day and weekly livestreams, from 3 million listeners to Madison Square Garden.",
+    label:"#F5A9C2", sticker:"New arrival" },
+  { file:"02", soon:true },
+  { file:"03", soon:true }
+];
+
+const list = document.getElementById("records");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+RECORDS.forEach(r => {
+  const li = document.createElement("li");
+  if (r.soon) {
+    li.className = "album soon";
+    li.innerHTML = `<div class="shut" aria-label="Breakout file ${esc(r.file)}, coming soon">
+      <div class="cover-wrap"><div class="cover"><span class="stamp">File ${esc(r.file)}</span><span class="stamp-sub">In the works</span></div></div></div>
+      <div class="meta"><span class="who">Coming soon</span><span class="what">The next breakout file is being researched.</span></div>`;
+  } else {
+    li.className = "album";
+    if (r.label) li.style.setProperty("--label", r.label);
+    li.innerHTML = `<a href="${esc(r.href)}" aria-label="Open breakout file ${esc(r.file)}: ${esc(r.artist)}, ${esc(r.t1)}">
+      <div class="cover-wrap"><div class="disc"></div>
+        ${r.sticker ? `<div class="price">${esc(r.sticker)}</div>` : ""}
+        <div class="cover">
+          <img src="${esc(r.img)}" alt="${esc(r.imgAlt)}" width="640" height="640">
+          <span class="tag">File ${esc(r.file)}</span>
+          <div class="band"><span class="t1">${esc(r.t1)}</span><span class="t2">${esc(r.t2)}</span></div>
+        </div></div>
+      </a>
+      <div class="meta"><span class="who">${esc(r.artist)}</span><span class="what">${esc(r.genre)} · ${esc(r.years)}</span>
+        <span class="what">${esc(r.blurb)}</span><a class="go" href="${esc(r.href)}">Read the file</a>
+        ${r.credit ? `<span class="credit">${r.credit}</span>` : ""}</div>`;
+  }
+  list.appendChild(li);
+});
+</script>
+</body>
+</html>
